@@ -1,3 +1,5 @@
+import Availability from './elements/Availability'
+
 const Work = () => (
     <section className="grid grid-cols-2 gap-4">
         <div className="flex lg:justify-center">
@@ -12,11 +14,9 @@ const Work = () => (
                     drop me a line via E-mail.
                 </p>
                 <p>
-                    Availability for freelance work: Available 🙂Not Available
-                    😑
+                    <Availability />
                 </p>
                 <a
-                    v-if="availability"
                     href="tel:+31612589043"
                     className="flex align-center w-auto self-center"
                 >
