@@ -1,9 +1,9 @@
 const Landing = () => (
     <section className="row h-screen mx-auto">
-        <div className="w-12/12 flex justify-center items-center h-full flex-col text-base font-light leading-relaxed mt-0 mb-4 text-lightBlue-800">
+        <div className="w-12/12 flex justify-center items-center h-full flex-col mt-0 mb-4">
             <div>
                 <h1 className="text-center">Pieter Rees</h1>
-                <h3 className="text-center">Develops stuff</h3>
+                <h2 className="text-center">Develops stuff</h2>
 
                 <div className="flex">
                     <a

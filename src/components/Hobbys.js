@@ -3,14 +3,14 @@ const Hobbys = () => (
         <div className="w-12/12 flex justify-center items-center h-full flex-col">
             <div className="container mx-auto h-full">
                 <div className="w-full flex flex-col lg:justify-center">
-                    <div className="w-full flex lg:justify-end">
-                        <h2 className="mb-6">Hobbys</h2>
+                    <div className="w-full flex">
+                        <h2 className="mb-6">I like</h2>
                     </div>
                 </div>
-                <div className="row flex flex-col-reverse lg:flex-row flex-1 my-8">
+                <div className="row flex lg:flex-row-reverse flex-1 my-8">
                     <div className="w-full lg:w-2/6 flex justify-center items-center flex-col self-center mt-8 lg:mt-0">
                         <svg
-                            className="text-white fill-current h-128 w-128 lg:h-196 lg:w-196"
+                            className="fill-current h-32 w-32 "
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 64 64"
                         >
@@ -42,7 +42,7 @@ const Hobbys = () => (
                     </div>
                     <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center mt-8 lg:mt-0 lg:self-center">
                         <svg
-                            className="text-white fill-current h-128 w-128 lg:h-196 lg:w-196"
+                            className="fill-current h-32 w-32"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                         >
@@ -52,11 +52,11 @@ const Hobbys = () => (
                     </div>
                 </div>
                 <hr />
-                <div className="row flex flex-col-reverse lg:flex-row flex-1 my-8">
+                <div className="row flex flex-col-reverse lg:flex-row-reverse flex-1 my-8">
                     <div className="lg:w-2/6 flex justify-center items-center flex-col self-center mt-8 lg:mt-0">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="text-white fill-current h-128 w-128 lg:h-196 lg:w-196"
+                            className="fill-current h-32 w-32"
                             viewBox="0 0 512 512"
                         >
                             <path d="M432 0H0v80h432V0zm-16 64H16V16h400v48z" />
@@ -84,7 +84,7 @@ const Hobbys = () => (
                     </div>
                     <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center mt-8 lg:mt-0 lg:self-center">
                         <svg
-                            className="text-white fill-current h-128 w-128 lg:h-196 lg:w-196"
+                            className="fill-current h-32 w-32"
                             viewBox="0 0 64 64"
                             xmlns="http://www.w3.org/2000/svg"
                         >

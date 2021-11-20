@@ -15,10 +15,7 @@ module.exports = {
             black: '#3b444b',
             red: '#e53e3e',
         },
-        fontFamily: {
-            sans: ['Graphik', 'sans-serif'],
-            serif: ['Merriweather', 'serif'],
-        },
+        fontFamily: {},
     },
     variants: {
         extend: {},

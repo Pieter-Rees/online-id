@@ -2,7 +2,7 @@ const Tag = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
-        class="fill-current h-8 w-8 current-fill text-black"
+        className="fill-current h-8 w-8 current-fill text-black"
         data-v-36dca6bb=""
         data-v-a5cb03e2=""
     >

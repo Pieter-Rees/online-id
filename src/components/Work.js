@@ -1,12 +1,11 @@
 import Availability from './elements/Availability'
 
 const Work = () => (
-    <section className="grid grid-cols-2 gap-4">
-        <div className="flex lg:justify-center">
-            <h2 className="mb-6">Work?!</h2>
-        </div>
-        <div className="my-8">
-            <div className="w-6/6 flex justify-center items-start h-full flex-col">
+    <section className="container my-8">
+        <h2 className="mb-6">Work?!</h2>
+
+        <div className="grid grid-cols-2 gap-4">
+            <div>
                 <p>
                     Currently I am working @ GoodUp. We provide The #1 tech
                     solution for activating employees on your company purpose. I
@@ -16,6 +15,8 @@ const Work = () => (
                 <p>
                     <Availability />
                 </p>
+            </div>
+            <div>
                 <a
                     href="tel:+31612589043"
                     className="flex align-center w-auto self-center"
