@@ -1,7 +1,7 @@
 const About = () => (
-    <section className="container mx-auto">
+    <section className="container mx-auto my-24">
         <h2>This guy..</h2>
-        <div className="grid grid-cols-2 gap-4 my-8">
+        <div className="grid grid-cols-2 gap-4">
             <div className="flex lg:mb-0 self-center justify-center">
                 <div className="flex overflow-hidden h-64 justify-center">
                     <div className="shadow-medium h-48 w-48 rounded-full overflow-hidden flex justify-center align-center">

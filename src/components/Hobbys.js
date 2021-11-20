@@ -1,5 +1,5 @@
 const Hobbys = () => (
-    <section className="row h-full mx-auto">
+    <section className="container h-full mx-auto my-24">
         <div className="w-12/12 flex justify-center items-center h-full flex-col">
             <div className="container mx-auto h-full">
                 <div className="w-full flex flex-col lg:justify-center">
@@ -7,8 +7,8 @@ const Hobbys = () => (
                         <h2 className="mb-6">I like</h2>
                     </div>
                 </div>
-                <div className="row flex lg:flex-row-reverse flex-1 my-8">
-                    <div className="w-full lg:w-2/6 flex justify-center items-center flex-col self-center mt-8 lg:mt-0">
+                <div className="flex lg:flex-row-reverse flex-1">
+                    <div className="w-full lg:w-2/6 flex justify-center items-center flex-col self-center  lg:mt-0">
                         <svg
                             className="fill-current h-32 w-32 "
                             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const Hobbys = () => (
                     </div>
                 </div>
                 <hr />
-                <div className="row flex flex-col lg:flex-row mt-8 flex-1 my-8">
+                <div className="flex flex-col lg:flex-row  flex-1">
                     <div className="w-full lg:w-4/6 flex justify-start items-start h-full flex-col">
                         <h3 className="mb-6">RC</h3>
                         <p>
@@ -40,7 +40,7 @@ const Hobbys = () => (
                             related.
                         </p>
                     </div>
-                    <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center mt-8 lg:mt-0 lg:self-center">
+                    <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center  lg:mt-0 lg:self-center">
                         <svg
                             className="fill-current h-32 w-32"
                             xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,8 @@ const Hobbys = () => (
                     </div>
                 </div>
                 <hr />
-                <div className="row flex flex-col-reverse lg:flex-row-reverse flex-1 my-8">
-                    <div className="lg:w-2/6 flex justify-center items-center flex-col self-center mt-8 lg:mt-0">
+                <div className="flex flex-col-reverse lg:flex-row-reverse flex-1">
+                    <div className="lg:w-2/6 flex justify-center items-center flex-col self-center  lg:mt-0">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="fill-current h-32 w-32"
@@ -73,7 +73,7 @@ const Hobbys = () => (
                     </div>
                 </div>
                 <hr />
-                <div className="row flex flex-col lg:flex-row my-8 flex-1">
+                <div className="flex flex-col lg:flex-row flex-1">
                     <div className="w-full lg:w-4/6 flex justify-start items-start h-full flex-col">
                         <h3 className="mb-6">(Ancient) tech</h3>
                         <p>
@@ -82,7 +82,7 @@ const Hobbys = () => (
                             and not so ancient tech.
                         </p>
                     </div>
-                    <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center mt-8 lg:mt-0 lg:self-center">
+                    <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center  lg:mt-0 lg:self-center">
                         <svg
                             className="fill-current h-32 w-32"
                             viewBox="0 0 64 64"

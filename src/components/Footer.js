@@ -1,13 +1,13 @@
 import Tag from './svg/Tag'
 
 const Footer = () => (
-    <footer className="container row mx-auto">
+    <footer className="container mx-auto">
         <div className="w-12/12 flex justify-center items-center h-full flex-col">
             <div className="container h-full mx-auto">
                 <div className="w-full h-full top-0 left-0"></div>
 
                 <div className="container mx-auto relative p-8">
-                    <div className="row flex justify-center flex-col align-center">
+                    <div className=" lex justify-center flex-col align-center">
                         <div className="flex justify-center my-4">
                             <Tag />
                         </div>

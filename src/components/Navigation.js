@@ -7,7 +7,7 @@ const Navigation = () => (
                 className="flex flex-1 justify-center items-center"
                 href="mailto:pieter@pieterrees.nl"
             >
-                mail
+                Email
             </a>
 
             <div className="flex flex-1 justify-center items-center">
@@ -17,10 +17,12 @@ const Navigation = () => (
             </div>
 
             <a
-                href="tel:+31612589043"
-                className="flex flex-1 justify-center items-center"
+                rel="noreferrer"
+                href="https://github.com/Pieter-Rees"
+                target="_blank"
+                className="flex flex-1 justify-center items-center m-8"
             >
-                Phone
+                Github
             </a>
         </div>
     </nav>

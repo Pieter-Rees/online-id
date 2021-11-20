@@ -7,9 +7,9 @@ function IsAvailable(props) {
 }
 
 const Availability = () => (
-    <div>
+    <p>
         Availability for freelance work: <IsAvailable Available={false} />
-    </div>
+    </p>
 )
 
 export default Availability

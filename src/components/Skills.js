@@ -1,10 +1,8 @@
 const Skills = () => (
-    <section className="container h-full mx-auto">
-        <div className="row flex">
-            <h2 className="mb-6">Skills</h2>
-        </div>
-        <div className="row flex lg:flex-row flex-1 my-8">
-            <div className="lg:w-2/6 flex justify-center items-center h-full flex-col self-center mt-8 lg:mt-0">
+    <section className="container h-full mx-auto my-24">
+        <h2 className="mb-6">Skills</h2>
+        <div className="flex lg:flex-row flex-1 ">
+            <div className="lg:w-2/6 flex justify-center items-center h-full flex-col self-center  lg:mt-0">
                 <svg
                     className="svg-icon h-32 w-32"
                     viewBox="0 0 64 64"
@@ -27,7 +25,7 @@ const Skills = () => (
             </div>
         </div>
         <hr />
-        <div className="row h-full flex flex-col lg:flex-row-reverse mt-8 flex-1 my-8">
+        <div className="h-full flex flex-col lg:flex-row-reverse  flex-1 ">
             <div className="w-full lg:w-4/6 flex justify-start items-start h-full flex-col">
                 <h3 className="mb-6">Backend</h3>
                 <p>
@@ -36,7 +34,7 @@ const Skills = () => (
                     requests and responds. The whole shebang.
                 </p>
             </div>
-            <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center mt-8 lg:mt-0 lg:self-center">
+            <div className="w-full lg:w-2/6 flex justify-center items-start h-full flex-col items-center  lg:mt-0 lg:self-center">
                 <svg
                     className="svg-icon h-32 w-32"
                     viewBox="0 0 64 64"
@@ -49,8 +47,8 @@ const Skills = () => (
             </div>
         </div>
         <hr />
-        <div className="row flex flex-col-reverse lg:flex-row flex-1 my-8">
-            <div className="lg:w-2/6 flex justify-center items-center h-full flex-col mt-8 lg:mt-0 lg:self-center">
+        <div className="flex flex-col-reverse lg:flex-row flex-1 ">
+            <div className="lg:w-2/6 flex justify-center items-center h-full flex-col  lg:mt-0 lg:self-center">
                 <svg
                     className="svg-icon h-32 w-32"
                     viewBox="0 0 504 504"
