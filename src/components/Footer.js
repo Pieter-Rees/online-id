@@ -1,3 +1,5 @@
+import Tag from './svg/Tag'
+
 const Footer = () => (
     <footer className="container row mx-auto">
         <div className="w-12/12 flex justify-center items-center h-full flex-col">
@@ -6,7 +8,9 @@ const Footer = () => (
 
                 <div className="container mx-auto relative p-8">
                     <div className="row flex justify-center flex-col align-center">
-                        <div className="flex justify-center my-4">tag</div>
+                        <div className="flex justify-center my-4">
+                            <Tag />
+                        </div>
 
                         <h5 className="text-center">
                             Made with 💙 in Amsterdam

@@ -9,14 +9,16 @@ import Footer from './components/Footer'
 
 function App() {
     return (
-        <div className="container mx-auto">
-            <Navigation />
-            <Landing />
-            <About />
-            <Skills />
-            <Hobbys />
-            <Work />
-            <Footer />
+        <div className="bg-white">
+            <div className="container mx-auto">
+                <Navigation />
+                <Landing />
+                <About />
+                <Skills />
+                <Hobbys />
+                <Work />
+                <Footer />
+            </div>
         </div>
     )
 }
