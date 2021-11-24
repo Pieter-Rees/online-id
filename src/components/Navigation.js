@@ -1,18 +1,21 @@
+import Email from './svg/Email'
+import Github from './svg/Github'
 import Tag from './svg/Tag'
+import SvgContainer from './svg/SvgContainer'
 
 const Navigation = () => (
     <nav className="fixed top-0 left-0 w-full section bg-white z-50 hide-on-print shadow-md">
-        <div className="container mx-auto flex justify-center p-4">
+        <div className="container mx-auto flex justify-center">
             <a
                 className="flex flex-1 justify-center items-center"
                 href="mailto:pieter@pieterrees.nl"
             >
-                Email
+                <SvgContainer svg={<Email />} />
             </a>
 
             <div className="flex flex-1 justify-center items-center">
                 <span className="cursor-crosshair">
-                    <Tag />
+                    <SvgContainer svg={<Tag />} />
                 </span>
             </div>
 
@@ -22,7 +25,7 @@ const Navigation = () => (
                 target="_blank"
                 className="flex flex-1 justify-center items-center m-8"
             >
-                Github
+                <SvgContainer svg={<Github />} />
             </a>
         </div>
     </nav>

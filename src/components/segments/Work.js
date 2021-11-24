@@ -1,7 +1,7 @@
-import Availability from './elements/Availability'
+import Availability from '../elements/Availability'
 
 const Work = () => (
-    <section className="container mx-auto my-24">
+    <div>
         <h2 className="mb-6">Work?!</h2>
 
         <div className="grid grid-cols-2 gap-4">
@@ -31,7 +31,7 @@ const Work = () => (
                 </a>
             </div>
         </div>
-    </section>
+    </div>
 )
 
 export default Work

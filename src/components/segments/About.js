@@ -1,5 +1,5 @@
 const About = () => (
-    <section className="container mx-auto my-24">
+    <div>
         <h2>This guy..</h2>
         <div className="grid grid-cols-2 gap-4">
             <div className="flex lg:mb-0 self-center justify-center">
@@ -24,7 +24,7 @@ const About = () => (
                 </p>
             </div>
         </div>
-    </section>
+    </div>
 )
 
 export default About
