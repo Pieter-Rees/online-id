@@ -1,8 +1,10 @@
 import p from '../../img/p.webp'
+import Title from '../elements/Title'
 
 const About = () => (
     <div>
-        <h2>This guy..</h2>
+        <Title title={'This guy..'} />
+
         <div className="grid grid-cols-2 gap-4">
             <div className="flex lg:mb-0 self-center justify-center">
                 <div className="flex overflow-hidden h-64 justify-center">

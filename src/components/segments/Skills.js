@@ -1,8 +1,9 @@
 import ContentContainer from '../elements/ContentContainer'
+import Title from '../elements/Title'
 
 const Skills = () => (
     <div>
-        <h2 className="mb-6">Skills</h2>
+        <Title title={'Skills'} />
 
         <div className="grid grid-cols-3 gap-4">
             <ContentContainer
