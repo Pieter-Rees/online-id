@@ -6,9 +6,10 @@ function IsAvailable(props) {
     return 'Not Available 😑'
 }
 
-const Availability = () => (
+const Availability = (props) => (
     <p>
-        Availability for freelance work: <IsAvailable Available={false} />
+        Availability for freelance work:{' '}
+        <IsAvailable Available={props.available} />
     </p>
 )
 

@@ -1,3 +1,5 @@
+import p from '../../img/p.webp'
+
 const About = () => (
     <div>
         <h2>This guy..</h2>
@@ -8,7 +10,7 @@ const About = () => (
                         <picture>
                             <source type="image/webp" alt="Pieter's head" />
                             <img
-                                src="/img/p.jpg"
+                                src={p}
                                 alt="Pieter's head"
                                 className="h-48 w-48"
                             />

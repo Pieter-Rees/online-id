@@ -4,7 +4,7 @@ import Tag from './svg/Tag'
 import SvgContainer from './svg/SvgContainer'
 
 const Navigation = () => (
-    <nav className="fixed top-0 left-0 w-full bg-white z-50 hide-on-print shadow-md">
+    <nav className="fixed top-0 left-0 w-full bg-white z-50 hide-on-print shadow-md p-2">
         <div className="container mx-auto flex justify-center">
             <a
                 className="flex flex-1 justify-center items-center"
@@ -23,7 +23,7 @@ const Navigation = () => (
                 rel="noreferrer"
                 href="https://github.com/Pieter-Rees"
                 target="_blank"
-                className="flex flex-1 justify-center items-center m-8"
+                className="flex flex-1 justify-center items-center"
             >
                 <SvgContainer svg={<Github />} />
             </a>
