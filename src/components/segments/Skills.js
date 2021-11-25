@@ -1,5 +1,5 @@
 const Skills = () => (
-    <section className="container h-full mx-auto my-24">
+    <div>
         <h2 className="mb-6">Skills</h2>
         <div className="flex lg:flex-row flex-1 ">
             <div className="lg:w-2/6 flex justify-center items-center h-full flex-col self-center  lg:mt-0">
@@ -66,7 +66,7 @@ const Skills = () => (
                 </p>
             </div>
         </div>
-    </section>
+    </div>
 )
 
 export default Skills

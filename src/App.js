@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="bg-white">
             <Navigation />
-            <Landing />
+            <Container fullHeight={true} content={<Landing />} />
             <Container content={<About />} />
             <Container content={<Skills />} />
             <Container content={<Hobbys />} />

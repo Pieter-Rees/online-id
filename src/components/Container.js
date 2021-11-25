@@ -1,5 +1,9 @@
 const Container = (props) => (
-    <div className="container mx-auto my-32">{props.content}</div>
+    <section
+        className={`container mx-auto ${props.fullHeight ? 'h-screen' : ''}`}
+    >
+        {props.content}
+    </section>
 )
 
 export default Container
