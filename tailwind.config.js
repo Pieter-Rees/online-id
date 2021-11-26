@@ -15,6 +15,7 @@ module.exports = {
             white: '#f8f8ff',
             black: '#3b444b',
             red: '#e53e3e',
+            toxic: '#61de2a',
         },
         fontFamily: {},
     },

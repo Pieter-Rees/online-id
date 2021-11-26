@@ -9,7 +9,7 @@ import Container from './components/elements/Container'
 
 function App() {
     return (
-        <div className="bg-white">
+        <div>
             <Container fullHeight={true} content={<Landing />} />
             <Container smallContainer={true} content={<About />} />
             <Container content={<Skills />} />

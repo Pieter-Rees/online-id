@@ -11,7 +11,7 @@ const Work = () => (
                 Currently I am working @ GoodUp. We provide The #1 tech solution
                 for activating employees on your company purpose. I am always up
                 for a nice talk about innovative ideas. Please drop me a line
-                via E-mail.
+                via <a href="mailto:pieter@pieterrees.nl">E-mail</a>.
             </p>
             <Availability available={true} />
         </div>
