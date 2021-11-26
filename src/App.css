@@ -1,4 +1,13 @@
 @layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a,
+    p {
+        @apply subpixel-antialiased;
+    }
     h1 {
         @apply text-white;
         @apply text-9xl;
@@ -21,7 +30,7 @@
     }
     p {
         @apply text-white;
-        @apply text-lg;
+        @apply text-xl;
     }
     a {
         @apply text-white;
