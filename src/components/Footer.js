@@ -1,5 +1,6 @@
-import SvgContainer from './svg/SvgContainer'
+import SvgContainer from './elements/SvgContainer'
 import Tag from './svg/Tag'
+import FooterDate from './elements/FooterDate'
 
 const Footer = () => (
     <footer className="container mx-auto">
@@ -10,11 +11,13 @@ const Footer = () => (
                         <SvgContainer svg={<Tag />} />
                     </div>
 
-                    <h5 className="text-center">Made with 💙 in Amsterdam</h5>
                     <h5 className="text-center">
+                        Made with 💙 in Amsterdam
+                        <br />
                         Released under the DBAD PUBLIC LICENCE
+                        <br />
+                        <FooterDate />
                     </h5>
-                    <h5 className="text-center">© 2021</h5>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import ContentContainer from '../elements/ContentContainer'
 import Title from '../elements/Title'
+import Hr from '../elements/Hr'
 
 const Skills = () => (
     <div>
@@ -48,6 +49,7 @@ const Skills = () => (
                 }
             />
         </div>
+        <Hr />
     </div>
 )
 

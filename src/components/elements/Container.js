@@ -1,6 +1,7 @@
 const Container = (props) => (
     <section
-        className={`container mx-auto ${props.fullHeight ? 'h-screen' : ''}`}
+        className={`container mx-auto 
+        ${props.fullHeight ? 'h-screen' : ''}`}
     >
         {props.content}
     </section>

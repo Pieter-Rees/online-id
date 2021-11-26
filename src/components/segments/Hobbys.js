@@ -1,10 +1,10 @@
 import ContentContainer from '../elements/ContentContainer'
 import Title from '../elements/Title'
+import Hr from '../elements/Hr'
 
 const Hobbys = () => (
     <div>
         <Title title={'I like'} />
-
         <div className="grid grid-cols-3 gap-4 gap-y-0">
             <ContentContainer
                 image={
@@ -80,6 +80,7 @@ const Hobbys = () => (
                 }
             />
         </div>
+        <Hr />
     </div>
 )
 

@@ -1,11 +1,12 @@
 import Availability from '../elements/Availability'
 import Title from '../elements/Title'
+import Hr from '../elements/Hr'
 
 const Work = () => (
     <div>
         <Title title={'Work?!'} />
 
-        <div className="grid">
+        <div className="grid w-2/4 mx-auto">
             <p>
                 Currently I am working @ GoodUp. We provide The #1 tech solution
                 for activating employees on your company purpose. I am always up
@@ -14,6 +15,7 @@ const Work = () => (
             </p>
             <Availability available={true} />
         </div>
+        <Hr />
     </div>
 )
 
