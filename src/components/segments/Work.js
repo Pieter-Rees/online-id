@@ -6,7 +6,7 @@ const Work = () => (
     <div>
         <Title title={'Work?!'} />
 
-        <div className="grid w-2/4 mx-auto">
+        <div className="grid mx-auto">
             <p>
                 Currently I am working @ GoodUp. We provide The #1 tech solution
                 for activating employees on your company purpose. I am always up

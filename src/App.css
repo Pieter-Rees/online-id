@@ -10,7 +10,7 @@
     }
     h1 {
         @apply text-white;
-        @apply text-9xl;
+        @apply text-8xl;
     }
     h2 {
         @apply text-white;
@@ -38,8 +38,8 @@
     }
 
     body {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
+        background: linear-gradient(-45deg, black, grey, red);
+        background-size: 300% 300%;
         animation: gradient 20s ease infinite;
     }
 
