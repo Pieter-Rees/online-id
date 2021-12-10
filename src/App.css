@@ -8,6 +8,12 @@
     p {
         @apply subpixel-antialiased;
     }
+
+    p::first-letter {
+        font-size: 150%;
+        @apply text-red;
+    }
+
     h1 {
         @apply text-white;
         @apply text-8xl;
@@ -38,7 +44,7 @@
     }
 
     body {
-        background: linear-gradient(-45deg, black, grey, red);
+        background: linear-gradient(-45deg, black, grey);
         background-size: 300% 300%;
         animation: gradient 20s ease infinite;
     }

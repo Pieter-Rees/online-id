@@ -4,7 +4,9 @@ import FooterDate from './elements/FooterDate'
 
 const Footer = () => (
     <div className="pb-8">
-        <SvgContainer svg={<Tag />} />
+        <div className="my-8">
+            <SvgContainer size="small" svg={<Tag />} color="white" />
+        </div>
 
         <h5 className="text-center">
             Made with 💙 in Amsterdam

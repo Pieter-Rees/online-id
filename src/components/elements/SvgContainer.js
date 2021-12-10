@@ -1,9 +1,15 @@
+function size(props) {
+    if (props.size === 'small') {
+        return 'w-8 h-8'
+    } else if (props.size === 'medium') {
+        return 'w-24 h-24'
+    } else {
+        return 'w-48 h-48'
+    }
+}
+
 const SvgContainer = (props) => (
-    <div
-        className={`container text-white mx-auto mb-8 ${
-            props.big ? 'h-28 w-28' : 'h-12 w-12'
-        }`}
-    >
+    <div className={`container mx-auto text-${props.color} ${size(props)}`}>
         {props.svg}
     </div>
 )
