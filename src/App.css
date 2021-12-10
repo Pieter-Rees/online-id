@@ -1,63 +1,61 @@
-@layer base {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    a,
-    p {
-        @apply subpixel-antialiased;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+    @apply subpixel-antialiased;
+}
 
-    p::first-letter {
-        font-size: 150%;
-        @apply text-red;
-    }
+p::first-letter {
+    font-size: 150%;
+    @apply text-red;
+}
 
-    h1 {
-        @apply text-white;
-        @apply text-8xl;
-    }
-    h2 {
-        @apply text-white;
-        @apply text-7xl;
-    }
-    h3 {
-        @apply text-white;
-        @apply text-5xl;
-    }
-    h4 {
-        @apply text-white;
-        @apply text-3xl;
-    }
-    h5 {
-        @apply text-white;
-        @apply text-xl;
-    }
-    p {
-        @apply text-white;
-        @apply text-xl;
-    }
-    a {
-        @apply text-white;
-        @apply underline;
-    }
+h1 {
+    @apply text-white;
+    @apply text-8xl;
+}
+h2 {
+    @apply text-white;
+    @apply text-7xl;
+}
+h3 {
+    @apply text-white;
+    @apply text-5xl;
+}
+h4 {
+    @apply text-white;
+    @apply text-3xl;
+}
+h5 {
+    @apply text-white;
+    @apply text-xl;
+}
+p {
+    @apply text-white;
+    @apply text-xl;
+}
+a {
+    @apply text-white;
+    @apply underline;
+}
 
-    body {
-        background: linear-gradient(-45deg, black, grey);
-        background-size: 300% 300%;
-        animation: gradient 20s ease infinite;
-    }
+body {
+    background: linear-gradient(-45deg, black, grey);
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+}
 
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
