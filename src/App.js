@@ -12,7 +12,7 @@ import Github from './components/svg/Github'
 
 function App() {
     return (
-        <div>
+        <div className="px-16">
             <Social github={<Github />} email={<Email />} />
             <Container fullHeight={true} content={<Landing />} />
             <Container smallContainer={true} content={<About />} />

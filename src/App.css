@@ -15,23 +15,38 @@ p::first-letter {
 
 h1 {
     @apply text-white;
-    @apply text-8xl;
+    @apply text-7xl;
+    @screen lg {
+        @apply text-8xl;
+    }
 }
 h2 {
     @apply text-white;
-    @apply text-7xl;
+    @apply text-6xl;
+    @screen lg {
+        @apply text-7xl;
+    }
 }
 h3 {
     @apply text-white;
     @apply text-5xl;
+    @screen lg {
+        @apply text-6xl;
+    }
 }
 h4 {
     @apply text-white;
-    @apply text-3xl;
+    @apply text-4xl;
+    @screen lg {
+        @apply text-5xl;
+    }
 }
 h5 {
     @apply text-white;
-    @apply text-xl;
+    @apply text-3xl;
+    @screen lg {
+        @apply text-4xl;
+    }
 }
 p {
     @apply text-white;
