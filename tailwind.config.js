@@ -1,7 +1,6 @@
 module.exports = {
-    content: ['./src/**/*.{js,jsx}'],
-    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    darkMode: false, // or 'media' or 'className'
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    media: false, // or 'media' or 'className'
     theme: {
         cursor: { crosshair: 'crosshair' },
         screens: {

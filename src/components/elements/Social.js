@@ -1,7 +1,7 @@
 import SvgContainer from './SvgContainer'
 
 const Social = (props) => (
-    <div className="fixed right-0 m-8 p-4 bg-black rounded-3xl">
+    <div className="fixed right-0 m-8 p-4 rounded-3xl backdrop-blur-sm	border-white border-solid border-2">
         <div className="flex">
             <div class="mx-4">
                 <a
@@ -14,8 +14,8 @@ const Social = (props) => (
                         size="small"
                         color="white"
                     />
-                </a>
-            </div>
+                </a>{' '}
+            </div>{' '}
             <div class="mx-4">
                 <a
                     target="_blank"
@@ -27,9 +27,9 @@ const Social = (props) => (
                         size="small"
                         color="white"
                     />
-                </a>
-            </div>
-        </div>
+                </a>{' '}
+            </div>{' '}
+        </div>{' '}
     </div>
 )
 

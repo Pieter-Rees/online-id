@@ -9,7 +9,7 @@ function size(props) {
 }
 
 const SvgContainer = (props) => (
-    <div className={`container mx-auto text-${props.color} ${size(props)}`}>
+    <div className={`container mx-auto fill-${props.color} ${size(props)}`}>
         {props.svg}
     </div>
 )
