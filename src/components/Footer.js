@@ -8,13 +8,13 @@ const Footer = () => (
             <SvgContainer size="small" svg={<Tag />} color="white" />
         </div>
 
-        <h5 className="text-center">
+        <p className="text-center">
             Made with 💙 in Amsterdam
             <br />
             Released under the DBAD PUBLIC LICENCE
             <br />
             <FooterDate />
-        </h5>
+        </p>
     </div>
 )
 

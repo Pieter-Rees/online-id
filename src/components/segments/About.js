@@ -7,8 +7,8 @@ const About = () => (
         <Title title={'This guy..'} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
             <div className="flex self-center justify-center">
-                <div className="flex overflow-hidden h-64 items-center">
-                    <div className="shadow-xl border-2 border-white border-solid h-48 w-48 rounded-full overflow-hidden flex justify-center align-center">
+                <div className="flex overflow-hidden items-center">
+                    <div className="shadow-xl border-2 border-white border-solid rounded-full overflow-hidden flex justify-center align-center">
                         <picture>
                             <source type="image/webp" alt="Pieter's head" />
                             <img
