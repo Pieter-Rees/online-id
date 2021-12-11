@@ -1,7 +1,7 @@
 const Github = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="stroke-white"
+        className="ease-in-out duration-300 stroke-white hover:stroke-red"
         viewBox="0 0 24 24"
         fill="transparent"
         stroke-width="2"

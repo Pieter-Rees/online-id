@@ -1,6 +1,6 @@
 function size(props) {
     if (props.size === 'small') {
-        return 'w-8 h-8'
+        return 'w-6 h-6 lg:w-12 lg:h-12'
     } else if (props.size === 'medium') {
         return 'w-24 h-24'
     } else {
