@@ -10,7 +10,7 @@ const Skills = () => (
             <ContentContainer
                 image={
                     <svg
-                        className="fill-white"
+                        className="fill-inherit"
                         viewBox="0 0 64 64"
                         xmlns="http://www.w3.org/2000/svg"
                     >
@@ -28,7 +28,7 @@ const Skills = () => (
             <ContentContainer
                 image={
                     <svg
-                        className="fill-white"
+                        className="fill-inherit"
                         viewBox="0 0 64 64"
                         xmlns="http://www.w3.org/2000/svg"
                     >
@@ -45,7 +45,7 @@ const Skills = () => (
             <ContentContainer
                 image={
                     <svg
-                        className="fill-white"
+                        className="fill-inherit"
                         viewBox="0 0 504 504"
                         xmlns="http://www.w3.org/2000/svg"
                     >
