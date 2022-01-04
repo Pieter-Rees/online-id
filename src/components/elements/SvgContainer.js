@@ -13,7 +13,7 @@ const SvgContainer = (props) => (
     <div
         className={`container mx-auto ease-in-out duration-300 fill-${
             props.color
-        } hover:fill-${props.hover} ${size(props)}`}
+        } ${size(props)}`}
     >
         {props.svg}
     </div>

@@ -5,7 +5,7 @@ import Hr from '../elements/Hr'
 const Hobbys = () => (
     <div>
         <Title title={'Exitement'} />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-36">
             <ContentContainer
                 image={
                     <svg

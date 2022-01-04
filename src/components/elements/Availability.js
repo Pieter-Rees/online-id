@@ -7,10 +7,12 @@ function IsAvailable(props) {
 }
 
 const Availability = (props) => (
-    <p>
-        Availability for freelance work:{' '}
-        <IsAvailable Available={props.available} />
-    </p>
+    <div>
+        <p>Availability for freelance work: </p>
+        <p className="text-center mt-4">
+            <IsAvailable Available={props.available} />
+        </p>
+    </div>
 )
 
 export default Availability

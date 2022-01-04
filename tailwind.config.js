@@ -15,7 +15,6 @@ module.exports = {
             red: '#e53e3e',
             toxic: '#61de2a',
         },
-        fontFamily: {},
     },
     variants: {
         extend: {},
