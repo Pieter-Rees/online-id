@@ -1,6 +1,5 @@
 import p from '../../img/p.webp'
 import Title from '../elements/Title'
-import Hr from '../elements/Hr'
 
 const About = () => (
     <div>
@@ -28,7 +27,6 @@ const About = () => (
                 </p>
             </div>
         </div>
-        <Hr />
     </div>
 )
 

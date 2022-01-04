@@ -1,6 +1,5 @@
 import ContentContainer from '../elements/ContentContainer'
 import Title from '../elements/Title'
-import Hr from '../elements/Hr'
 
 const Hobbys = () => (
     <div>
@@ -80,7 +79,6 @@ const Hobbys = () => (
                 }
             />
         </div>
-        <Hr />
     </div>
 )
 
