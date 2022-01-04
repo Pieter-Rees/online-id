@@ -15,42 +15,36 @@ p::first-letter {
 
 h1 {
     @apply text-white;
-    @apply text-6xl;
-    @screen lg {
+    @apply text-7xl;
+    @screen xxl {
         @apply text-8xl;
-    }
-    @screen xl {
-        @apply text-9xl;
     }
 }
 h2 {
     @apply text-white;
-    @apply text-5xl;
-    @screen lg {
-        @apply text-7xl;
-    }
-    @screen xl {
+    @apply text-6xl;
+    @screen xxl {
         @apply text-8xl;
     }
 }
 h3 {
     @apply text-white;
-    @apply text-4xl;
-    @screen lg {
+    @apply text-5xl;
+    @screen xxl {
         @apply text-6xl;
     }
 }
 h4 {
     @apply text-white;
-    @apply text-3xl;
-    @screen lg {
+    @apply text-4xl;
+    @screen xxl {
         @apply text-5xl;
     }
 }
 h5 {
     @apply text-white;
-    @apply text-2xl;
-    @screen lg {
+    @apply text-3xl;
+    @screen xxl {
         @apply text-4xl;
     }
 }
@@ -60,7 +54,7 @@ p {
     @screen sm {
         @apply text-xl;
     }
-    @screen lg {
+    @screen xxl {
         @apply text-2xl;
     }
 }
