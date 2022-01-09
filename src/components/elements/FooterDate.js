@@ -1,5 +1,5 @@
 function GetYear() {
-    return new Date().getFullYear()
+    return '1989 - ' + new Date().getFullYear()
 }
 
 const FooterDate = () => <GetYear />

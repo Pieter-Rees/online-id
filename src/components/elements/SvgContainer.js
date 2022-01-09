@@ -11,7 +11,7 @@ function size(props) {
 
 const SvgContainer = (props) => (
     <div
-        className={`container mx-auto ease-in-out duration-300 fill-${
+        className={`container mx-auto ease-in-out duration-100 fill-${
             props.color
         } ${size(props)}`}
     >

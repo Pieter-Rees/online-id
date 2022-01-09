@@ -4,7 +4,7 @@ import Title from '../elements/Title'
 const Hobbys = () => (
     <div>
         <Title title={'Exitement'} />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-36">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
             <ContentContainer
                 image={
                     <svg
@@ -57,8 +57,8 @@ const Hobbys = () => (
                         <path d="M80 144h16v64H80zM160 208v-64h-48v64h48zm-32-48h16v32h-16v-32zM256 208v-64h-48v64h48zm-32-48h16v32h-16v-32zM320 208v-64h-48v64h48zm-32-48h16v32h-16v-32zM176 144h16v64h-16zM336 144h16v64h-16z" />
                     </svg>
                 }
-                title={'Unix'}
-                content={'Daily driver. Arch BTW'}
+                title={'Linux'}
+                content={'Distrohopper & Linux explorer'}
             />
             <ContentContainer
                 image={
@@ -75,7 +75,7 @@ const Hobbys = () => (
                 }
                 title={'(Ancient) tech'}
                 content={
-                    ' In these modern times people should respect the elders. I will get highly enthusiastic from ancient and not so ancient tech.'
+                    'I will get highly enthusiastic from ancient and not so ancient technology.'
                 }
             />
         </div>

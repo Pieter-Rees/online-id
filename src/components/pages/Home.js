@@ -5,7 +5,7 @@ import Skills from '../segments/Skills'
 import Hobbys from '../segments/Hobbys'
 import Work from '../segments/Work'
 import Social from '../elements/Social'
-import Footer from '../Footer'
+import Footer from '../segments/Footer'
 import Container from '../elements/Container'
 import Hr from '../elements/Hr'
 

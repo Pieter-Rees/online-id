@@ -5,7 +5,7 @@ const Skills = () => (
     <div>
         <Title title={'Skills'} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-36">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
             <ContentContainer
                 image={
                     <svg
@@ -21,7 +21,7 @@ const Skills = () => (
                 }
                 title={'Frontend'}
                 content={
-                    'Fronted Development is something I adore. My biggest passion is to deliver meaningful software focused on a streamlined user design and performance. Usability should be a fundamental right.'
+                    'Fronted Development is something I adore. My biggest passion is to deliver meaningful software focused on a streamlined user centered design and performance.'
                 }
             />
             <ContentContainer

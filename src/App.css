@@ -6,6 +6,7 @@ h5,
 a,
 p {
     @apply subpixel-antialiased;
+    @apply font-mono;
 }
 
 p::first-letter {

@@ -1,10 +1,10 @@
-import SvgContainer from './elements/SvgContainer'
-import Tag from './svg/Tag'
-import FooterDate from './elements/FooterDate'
+import SvgContainer from '../elements/SvgContainer'
+import Tag from '../svg/Tag'
+import FooterDate from '../elements/FooterDate'
 
 const Footer = () => (
     <div className="pb-8">
-        <p className="text-center">
+        <p className="text-center text-sm">
             Made with 💙 in Amsterdam
             <br />
             Released under the DBAD PUBLIC LICENCE
