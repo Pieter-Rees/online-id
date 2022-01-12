@@ -4,10 +4,24 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
+import { Helmet } from 'react-helmet'
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
     <BrowserRouter>
+        <Helmet>
+            <title>App Title</title>
+            <meta name="description" content="App Description" />
+            <meta name="theme-color" content="#008f68" />
+            <script>
+                {`(function(){
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark')
+                } else {
+                    document.documentElement.classList.remove('dark')
+                }})();`}
+            </script>
+        </Helmet>
         <App />
     </BrowserRouter>,
     document.getElementById('root')

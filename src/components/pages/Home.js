@@ -16,24 +16,22 @@ const Container = lazy(() => import('../elements/Container'))
 function App() {
     return (
         <Suspense fallback={Renderloader()}>
-            <div className="dark:bg-red">
-                <Social />
-                <Navigation />
-                <Container fullHeight={true} content={<Landing />} />
-                <Container smallContainer={true} content={<About />} />
-                <Hr />
+            <Social />
+            <Navigation />
+            <Container fullHeight={true} content={<Landing />} />
+            <Container smallContainer={true} content={<About />} />
+            <Hr />
 
-                <Container content={<Skills />} />
-                <Hr />
+            <Container content={<Skills />} />
+            <Hr />
 
-                <Container content={<Exitement />} />
-                <Hr />
+            <Container content={<Exitement />} />
+            <Hr />
 
-                <Container content={<Work />} />
-                <Hr />
+            <Container content={<Work />} />
+            <Hr />
 
-                <Footer />
-            </div>
+            <Footer />
         </Suspense>
     )
 }
