@@ -7,7 +7,7 @@ const FooterDate = lazy(() => import('../elements/FooterDate'))
 
 const Footer = () => (
     <Suspense fallback={Renderloader()}>
-        <div className="pb-8">
+        <div id="footer" className="pb-8">
             <p className="text-center text-sm">
                 Made with 💙 in Amsterdam
                 <br />

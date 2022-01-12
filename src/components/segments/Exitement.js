@@ -4,9 +4,9 @@ import Renderloader from '../elements/Renderloader'
 const Title = lazy(() => import('../elements/Title'))
 const ContentContainer = lazy(() => import('../elements/ContentContainer'))
 
-const Hobbys = () => (
+const Exitement = () => (
     <Suspense fallback={Renderloader()}>
-        <div>
+        <div id="exitement">
             <Title title={'Exitement'} />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
                 <ContentContainer
@@ -87,4 +87,4 @@ const Hobbys = () => (
     </Suspense>
 )
 
-export default Hobbys
+export default Exitement

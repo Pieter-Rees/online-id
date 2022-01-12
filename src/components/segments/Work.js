@@ -6,7 +6,7 @@ const Availability = lazy(() => import('../elements/Availability'))
 
 const Work = () => (
     <Suspense fallback={Renderloader()}>
-        <div>
+        <div id="work">
             <Title title={'Work?!'} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mx-auto">
                 <div className="flex self-center justify-center">

@@ -6,7 +6,7 @@ const Image = lazy(() => import('../elements/Image'))
 
 const About = () => (
     <Suspense fallback={Renderloader()}>
-        <div>
+        <div id="about">
             <Title title={'This guy..'} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mx-auto">
                 <div className="flex self-center justify-center">
