@@ -21,7 +21,7 @@ class Toggle extends React.Component {
         this.setState((prevState) => ({
             isToggleOn: !prevState.isToggleOn,
         }))
-        if (this.isToggleOn) {
+        if (!this.state.isToggleOn) {
             document.documentElement.classList.add('dark')
             document.documentElement.classList.remove('light')
         } else {
