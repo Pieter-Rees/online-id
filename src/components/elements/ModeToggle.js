@@ -23,9 +23,11 @@ class Toggle extends React.Component {
         }))
         if (!this.state.isToggleOn) {
             document.documentElement.classList.add('dark')
+            localStorage.theme = 'dark'
             document.documentElement.classList.remove('light')
         } else {
             document.documentElement.classList.add('light')
+            localStorage.theme = 'light'
             document.documentElement.classList.remove('dark')
         }
     }
