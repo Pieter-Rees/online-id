@@ -34,8 +34,11 @@ class Toggle extends React.Component {
 
     render() {
         return (
-            <button onClick={this.handleClick}>
-                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            <button
+                className="absolute text-4xl left-0 top-0 p-4"
+                onClick={this.handleClick}
+            >
+                {this.state.isToggleOn ? '★' : '☆'}
             </button>
         )
     }
