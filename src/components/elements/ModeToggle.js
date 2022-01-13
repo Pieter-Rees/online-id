@@ -1,12 +1,7 @@
-// function ToggleMode() {
-//     console.log(localStorage.theme)
-//     return localStorage.theme
-// }
-
-// const ModeToggle = () => <ToggleMode />
-
-// export default ModeToggle
 import React, { Component } from 'react'
+import SvgContainer from './SvgContainer'
+import Moon from '../svg/Moon'
+import Sun from '../svg/Sun'
 
 class Toggle extends React.Component {
     constructor(props) {
@@ -35,10 +30,14 @@ class Toggle extends React.Component {
     render() {
         return (
             <button
-                className="absolute text-4xl left-0 top-0 p-4"
+                className="flex justify-center items-center"
                 onClick={this.handleClick}
             >
-                {this.state.isToggleOn ? '★' : '☆'}
+                {this.state.isToggleOn ? (
+                    <SvgContainer size="small" color="white" svg=<Moon /> />
+                ) : (
+                    <SvgContainer size="small" color="white" svg=<Sun /> />
+                )}
             </button>
         )
     }

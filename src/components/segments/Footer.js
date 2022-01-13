@@ -9,7 +9,7 @@ const Footer = () => (
     <Suspense fallback={Renderloader()}>
         <div id="footer" className="pb-8">
             <p className="text-center text-sm">
-                Made with 💙 in Amsterdam
+                Made with 🖤 in Amsterdam
                 <br />
                 Released under the DBAD PUBLIC LICENCE
                 <br />

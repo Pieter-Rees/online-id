@@ -3,12 +3,15 @@ import Renderloader from '../elements/Renderloader'
 const SvgContainer = lazy(() => import('./SvgContainer'))
 const Linkedin = lazy(() => import('../svg/Linkedin'))
 const Github = lazy(() => import('../svg/Github'))
-const Hr = lazy(() => import('../elements/Hr'))
+const ModeToggle = lazy(() => import('../elements/ModeToggle'))
 
 const Social = (props) => (
     <Suspense fallback={Renderloader()}>
         <div className="fixed left-0 bottom-0 m-4 p-2 lg:px-4 xl:px-6 rounded-3xl shadow-xl backdrop-blur-sm ease-in-out duration-100 border-white border-solid border">
-            <div className="flex">
+            <div className="flex items-center">
+                <div className="mx-2">
+                    <ModeToggle />
+                </div>
                 <div className="mx-2">
                     <a
                         aria-label="Github"
