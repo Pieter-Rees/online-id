@@ -3,13 +3,21 @@ import Renderloader from '../elements/Renderloader'
 
 const SvgContainer = lazy(() => import('../elements/SvgContainer'))
 const Tag = lazy(() => import('../svg/Tag'))
+const Heart = lazy(() => import('../svg/Heart'))
 const FooterDate = lazy(() => import('../elements/FooterDate'))
 
 const Footer = () => (
     <Suspense fallback={Renderloader()}>
         <div id="footer" className="pb-8">
             <p className="text-center text-sm">
-                Made with 🖤 in Amsterdam
+                Made with
+                <SvgContainer
+                    size="xsmall"
+                    svg={<Heart />}
+                    color="white"
+                    inline="true"
+                />
+                in Amsterdam
                 <br />
                 Released under the DBAD PUBLIC LICENCE
                 <br />

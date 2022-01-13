@@ -10,9 +10,6 @@ const Social = (props) => (
         <div className="fixed left-0 bottom-0 m-4 p-2 lg:px-4 xl:px-6 rounded-3xl shadow-xl backdrop-blur-sm ease-in-out duration-100 border-white border-solid border">
             <div className="flex items-center">
                 <div className="mx-2">
-                    <ModeToggle />
-                </div>
-                <div className="mx-2">
                     <a
                         aria-label="Github"
                         target="_blank"
@@ -46,6 +43,9 @@ const Social = (props) => (
                     >
                         pieter@pieterrees.nl
                     </a>
+                </div>
+                <div className="mx-2">
+                    <ModeToggle />
                 </div>
             </div>
         </div>

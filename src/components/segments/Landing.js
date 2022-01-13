@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 
 const Landing = () => (
@@ -7,7 +7,8 @@ const Landing = () => (
             <div className="h-full flex flex-col items-center justify-center">
                 <h1 className="text-center">Pieter Rees</h1>
                 <h2 className="text-center mt-8 text-4xl">
-                    I make <span className="text-white dark:text-red">web</span>
+                    I make{' '}
+                    <span className="text-white dark:text-red">web </span>
                     things, and more
                 </h2>
             </div>

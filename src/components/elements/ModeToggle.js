@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import SvgContainer from './SvgContainer'
 import Moon from '../svg/Moon'
 import Sun from '../svg/Sun'
@@ -34,9 +34,9 @@ class Toggle extends React.Component {
                 onClick={this.handleClick}
             >
                 {this.state.isToggleOn ? (
-                    <SvgContainer size="small" color="white" svg=<Moon /> />
+                    <SvgContainer size="xsmall" color="white" svg=<Moon /> />
                 ) : (
-                    <SvgContainer size="small" color="white" svg=<Sun /> />
+                    <SvgContainer size="xsmall" color="white" svg=<Sun /> />
                 )}
             </button>
         )
