@@ -16,7 +16,7 @@ const Social = (props) => (
                         rel="noreferrer"
                         href="https://github.com/pieter-rees"
                     >
-                        <SvgContainer svg={<Github />} />
+                        <SvgContainer svg={<Github />} color="white" />
                     </a>
                 </div>
 
@@ -39,7 +39,7 @@ const Social = (props) => (
                         target="_blank"
                         rel="noreferrer"
                         href="mailto:pieter@pieterrees.nl"
-                        className="ease-in-out duration-100 text-sm hover:text-red font-bold"
+                        className="ease-in-out duration-100 text-sm text-black dark:text-white hover:text-red font-bold"
                     >
                         pieter@pieterrees.nl
                     </a>

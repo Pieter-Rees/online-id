@@ -1,7 +1,7 @@
 const Github = () => (
     <svg
         viewBox="0 0 24 24"
-        className="ease-in-out duration-100 fill-grey hover:fill-red"
+        className="ease-in-out duration-100 fill-black dark:fill-white hover:fill-red"
         xmlns="http://www.w3.org/2000/svg"
     >
         <g>
