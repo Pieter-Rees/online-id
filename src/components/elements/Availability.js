@@ -8,8 +8,8 @@ function IsAvailable(props) {
 
 const Availability = (props) => (
     <div>
-        <p>Availability for freelance work: </p>
-        <p className="text-center mt-4">
+        <p className="dark:text-white">Availability for freelance work: </p>
+        <p className="text-center mt-4 dark:text-white">
             <IsAvailable Available={props.available} />
         </p>
     </div>
