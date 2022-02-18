@@ -11,12 +11,7 @@ const Footer = () => (
         <div id="footer" className="pb-8">
             <p className="text-center text-sm dark:text-white">
                 Made with
-                <SvgContainer
-                    size="xsmall"
-                    svg={<Heart />}
-                    color="grey"
-                    inline="true"
-                />
+                <SvgContainer size="xsmall" svg={<Heart />} inline="true" />
                 in Amsterdam
                 <br />
                 Released under the DBAD PUBLIC LICENCE

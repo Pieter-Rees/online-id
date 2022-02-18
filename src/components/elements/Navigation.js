@@ -16,7 +16,7 @@ const Navigation = (props) => (
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
                             >
                                 *
                             </Link>
@@ -29,7 +29,7 @@ const Navigation = (props) => (
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
                             >
                                 *
                             </Link>
@@ -42,7 +42,7 @@ const Navigation = (props) => (
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
                             >
                                 *
                             </Link>
@@ -55,7 +55,7 @@ const Navigation = (props) => (
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
                             >
                                 *
                             </Link>
