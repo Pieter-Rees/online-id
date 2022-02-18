@@ -26,7 +26,10 @@ h1 {
 }
 h2 {
     @apply text-white;
-    @apply text-6xl;
+    @apply text-5xl;
+    @screen xl {
+        @apply text-6xl;
+    }
     @screen xxl {
         @apply text-8xl;
     }

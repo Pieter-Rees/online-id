@@ -10,7 +10,7 @@ import { BrowserRouter } from 'react-router-dom'
 ReactDOM.render(
     <BrowserRouter>
         <Helmet>
-            <title>App Title</title>
+            <title>Pieterrees.nl</title>
             <meta name="description" content="App Description" />
             <meta name="theme-color" content="#008f68" />
             <script>

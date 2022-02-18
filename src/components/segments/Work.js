@@ -11,7 +11,7 @@ const Work = () => (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mx-auto">
                 <div className="flex self-center justify-center">
                     <div className="flex overflow-hidden items-center">
-                        <p className="dark:text-red">
+                        <p className="">
                             Currently I am working @ GoodUp. We provide The #1
                             tech solution for activating employees on your
                             company purpose. I am always up for a nice talk
