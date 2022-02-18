@@ -9,7 +9,7 @@ const Skills = () => (
         <div id="skills">
             <Title title={'Skills'} />
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 lg:gap-48">
                 <ContentContainer
                     image={
                         <svg

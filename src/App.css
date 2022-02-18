@@ -10,6 +10,7 @@ a,
 p {
     @apply subpixel-antialiased;
     @apply font-mono;
+    @apply text-black;
 }
 
 p::first-letter {
@@ -18,7 +19,6 @@ p::first-letter {
 }
 
 h1 {
-    @apply text-white;
     @apply text-7xl;
     @screen xxl {
         @apply text-8xl;
@@ -35,28 +35,24 @@ h2 {
     }
 }
 h3 {
-    @apply text-white;
     @apply text-5xl;
     @screen xxl {
         @apply text-6xl;
     }
 }
 h4 {
-    @apply text-white;
     @apply text-4xl;
     @screen xxl {
         @apply text-5xl;
     }
 }
 h5 {
-    @apply text-white;
     @apply text-3xl;
     @screen xxl {
         @apply text-4xl;
     }
 }
 p {
-    @apply text-white;
     @apply text-base;
     @screen sm {
         @apply text-xl;
@@ -66,15 +62,14 @@ p {
     }
 }
 a {
-    @apply text-white;
     @apply underline;
 }
 
-body {
+/* body {
     background: linear-gradient(-45deg, black, grey);
     background-size: 300% 300%;
     animation: gradient 20s ease infinite;
-}
+} */
 
 @keyframes gradient {
     0% {

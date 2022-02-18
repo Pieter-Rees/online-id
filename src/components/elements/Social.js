@@ -27,11 +27,11 @@ const Social = (props) => (
                         rel="noreferrer"
                         href="https://www.linkedin.com/in/pieter-rees-1299a52a/"
                     >
-                        <SvgContainer svg={<Linkedin />} color="white" />
+                        <SvgContainer svg={<Linkedin />} />
                     </a>
                 </div>
                 <span className="relative mx-2">
-                    <span className="absolute bg-white block w-px h-full border-solid border-white border-1"></span>
+                    <span className="absolute bg-grey block w-px h-full border-solid border-grey border-1"></span>
                 </span>
                 <div className="mx-2 flex items-center">
                     <a
@@ -39,7 +39,7 @@ const Social = (props) => (
                         target="_blank"
                         rel="noreferrer"
                         href="mailto:pieter@pieterrees.nl"
-                        className="ease-in-out duration-100 text-sm hover:text-red font-bold"
+                        className="ease-in-out duration-100 text-sm text-black dark:text-white hover:text-red font-bold"
                     >
                         pieter@pieterrees.nl
                     </a>

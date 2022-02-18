@@ -34,9 +34,9 @@ class Toggle extends React.Component {
                 onClick={this.handleClick}
             >
                 {this.state.isToggleOn ? (
-                    <SvgContainer size="xsmall" color="white" svg=<Moon /> />
+                    <SvgContainer size="xsmall" svg=<Moon /> />
                 ) : (
-                    <SvgContainer size="xsmall" color="white" svg=<Sun /> />
+                    <SvgContainer size="xsmall" svg=<Sun /> />
                 )}
             </button>
         )
