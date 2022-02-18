@@ -13,6 +13,10 @@ p {
     @apply text-black;
 }
 
+a {
+    @apply text-red;
+}
+
 p::first-letter {
     font-size: 150%;
     @apply text-red;
