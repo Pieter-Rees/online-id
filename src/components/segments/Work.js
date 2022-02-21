@@ -17,7 +17,7 @@ const Work = () => (
                             company purpose. I am always up for a nice talk
                             about innovative ideas. Please drop me a line via{' '}
                             <a
-                                className="ease-in-out duration-100 hover:text-red"
+                                className="ease-in-out duration-100 hover:text-red dark:text-white"
                                 href="mailto:pieter@pieterrees.nl"
                             >
                                 E-mail
