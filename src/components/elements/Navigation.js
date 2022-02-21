@@ -10,52 +10,52 @@ const Navigation = (props) => (
                     <ul className="text-xl m-0 p-0">
                         <li>
                             <Link
-                                activeClass="text-red"
+                                activeClass="text-red dark:text-red"
                                 to="landing"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline dark:text-white"
                             >
                                 *
                             </Link>
                         </li>
                         <li>
                             <Link
-                                activeClass="text-red"
+                                activeClass="text-red dark:text-red"
                                 to="about"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline dark:text-white"
                             >
                                 *
                             </Link>
                         </li>
                         <li>
                             <Link
-                                activeClass="text-red"
+                                activeClass="text-red dark:text-red"
                                 to="skills"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline dark:text-white"
                             >
                                 *
                             </Link>
                         </li>
                         <li>
                             <Link
-                                activeClass="text-red"
+                                activeClass="text-red dark:text-red"
                                 to="exitement"
                                 spy={true}
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
-                                className="cursor-crosshair ease-in-out duration-100 hover:text-red dark:text-white no-underline"
+                                className="cursor-crosshair ease-in-out duration-100 hover:text-red no-underline dark:text-white"
                             >
                                 *
                             </Link>

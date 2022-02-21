@@ -6,17 +6,25 @@ import Sun from '../svg/Sun'
 class Toggle extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { isToggleOn: false }
+        this.state = { isToggleOn: undefined }
 
         // This binding is necessary to make `this` work in the callback
         this.handleClick = this.handleClick.bind(this)
+
+        if (localStorage.theme === 'light') {
+            this.state.isToggleOn = true
+        } else {
+            this.state.isToggleOn = false
+        }
     }
 
     handleClick() {
         this.setState((prevState) => ({
             isToggleOn: !prevState.isToggleOn,
         }))
-        if (!this.state.isToggleOn) {
+        // const localStorageTheme = localStorage.theme
+
+        if (this.state.isToggleOn) {
             document.documentElement.classList.add('dark')
             localStorage.theme = 'dark'
             document.documentElement.classList.remove('light')

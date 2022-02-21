@@ -5,6 +5,7 @@ const Sun = () => (
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
+        className="fill-black dark:fill-white hover:fill-red"
         viewBox="0 0 323.227 323.227"
     >
         <g>
