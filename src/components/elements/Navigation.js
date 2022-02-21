@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 const Navigation = (props) => (
     <Suspense fallback={Renderloader()}>
