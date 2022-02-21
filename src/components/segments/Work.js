@@ -26,7 +26,7 @@ const Work = () => (
                         </p>
                     </div>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center justify-center">
                     <Availability available={true} />
                 </div>
             </div>
