@@ -4,7 +4,7 @@ import '../../App.css'
 import Social from '../elements/Social'
 import axios from 'axios'
 
-const baseURL = 'https://pietserver.nl:5050/api/resume/'
+const baseURL = 'localhost:5050/resume/'
 
 function App() {
     const [post, setPost] = React.useState(null)
