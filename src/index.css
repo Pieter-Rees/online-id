@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+    @apply subpixel-antialiased;
+    @apply font-mono;
+    @apply text-black;
+}
+
+p::first-letter {
+    font-size: 150%;
+    @apply text-red;
+}
+
+h1 {
+    @apply text-7xl;
+}
+h2 {
+    @apply text-6xl;
+}
+h3 {
+    @apply text-5xl;
+}
+h4 {
+    @apply text-4xl;
+}
+h5 {
+    @apply text-xl;
+}
+p {
+    @apply text-base;
+}
+a {
+    @apply underline;
+}
+
+/* body {
+    background: linear-gradient(-45deg, black, grey);
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+} */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

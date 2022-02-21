@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 
 const Title = lazy(() => import('../elements/Title'))
+const Paragraph = lazy(() => import('../elements/Paragraph'))
 const Image = lazy(() => import('../elements/Image'))
 
 const About = () => (
@@ -17,11 +18,11 @@ const About = () => (
                     </div>
                 </div>
                 <div className="flex items-center">
-                    <p className="dark:text-white">
-                        My name is Pieter Rees. I am a Developer with full stack
-                        experience and a huge interest for everything that is
-                        related to electronics and technology.
-                    </p>
+                    <Paragraph
+                        content={
+                            'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.'
+                        }
+                    />
                 </div>
             </div>
         </div>
