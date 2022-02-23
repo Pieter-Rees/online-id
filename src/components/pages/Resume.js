@@ -15,7 +15,6 @@ export default class Resume extends React.Component {
             const posts = response.data
             this.setState({ posts: posts })
         })
-        debugger
     }
 
     render() {
@@ -23,11 +22,11 @@ export default class Resume extends React.Component {
             <div className="col">
                 {this.state.posts.map((post, i) => (
                     <div key={i}>
-                        <div>{post.name}</div>
-                        <div>{post.age}</div>
+                        <h4>{post.title}</h4>
+                        <h5>{post.subTitle}</h5>
                         <ul>
-                            {post.powers.map((power) => (
-                                <li>{power.name}</li>
+                            {post.powers.map((power, i) => (
+                                <li key={i}>{power.name}</li>
                             ))}
                         </ul>
                     </div>
