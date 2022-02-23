@@ -1,27 +1,38 @@
 import React from 'react'
 
 import '../../App.css'
-import Social from '../elements/Social'
 import axios from 'axios'
 
-const baseURL = 'localhost:5050/resume/'
+const baseURL = 'http://localhost:5050/resume/'
 
-function App() {
-    const [post, setPost] = React.useState(null)
+export default class Resume extends React.Component {
+    state = {
+        posts: [],
+    }
 
-    React.useEffect(() => {
+    componentDidMount() {
         axios.get(baseURL).then((response) => {
-            setPost(response.data)
+            const posts = response.data
+            this.setState({ posts: posts })
         })
-    }, [])
+        debugger
+    }
 
-    if (!post) return null
-
-    return (
-        <div className="px-16">
-            <Social />
-        </div>
-    )
+    render() {
+        return (
+            <div className="col">
+                {this.state.posts.map((post, i) => (
+                    <div key={i}>
+                        <div>{post.name}</div>
+                        <div>{post.age}</div>
+                        <ul>
+                            {post.powers.map((power) => (
+                                <li>{power.name}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+        )
+    }
 }
-
-export default App
