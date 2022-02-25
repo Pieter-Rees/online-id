@@ -19,33 +19,11 @@ p::first-letter {
     @apply text-red;
 }
 
-h1 {
-    @apply text-7xl;
-}
-h2 {
-    @apply text-6xl;
-}
-h3 {
-    @apply text-5xl;
-}
-h4 {
-    @apply text-4xl;
-}
-h5 {
-    @apply text-xl;
-}
-p {
-    @apply text-base;
-}
-a {
-    @apply underline;
-}
-
-/* body {
+body {
     background: linear-gradient(-45deg, black, grey);
     background-size: 300% 300%;
     animation: gradient 20s ease infinite;
-} */
+}
 
 @keyframes gradient {
     0% {
