@@ -1,37 +1,24 @@
-import React from 'react'
-
 import '../../App.css'
-import axios from 'axios'
+import { lazy, Suspense } from 'react'
+import Renderloader from '../elements/Renderloader'
 
-const baseURL = 'http://localhost:5050/resume/'
+const Container = lazy(() => import('../elements/Container'))
+const ResumeContent = lazy(() => import('../segments/ResumeContent'))
+const ResumeLanding = lazy(() => import('../segments/ResumeLanding'))
+const Social = lazy(() => import('../elements/Social'))
 
-export default class Resume extends React.Component {
-    state = {
-        posts: [],
-    }
+function App() {
+    return (
+        <div className="dark:bg-black">
+            <Suspense fallback={Renderloader()}>
+                <Social />
 
-    componentDidMount() {
-        axios.get(baseURL).then((response) => {
-            const posts = response.data
-            this.setState({ posts: posts })
-        })
-    }
+                <Container fullHeight={true} content={<ResumeLanding />} />
 
-    render() {
-        return (
-            <div className="col">
-                {this.state.posts.map((post, i) => (
-                    <div key={i}>
-                        <h4>{post.title}</h4>
-                        <h5>{post.subTitle}</h5>
-                        <ul>
-                            {post.powers.map((power, i) => (
-                                <li key={i}>{power.name}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        )
-    }
+                <Container content={<ResumeContent />} />
+            </Suspense>
+        </div>
+    )
 }
+
+export default App
