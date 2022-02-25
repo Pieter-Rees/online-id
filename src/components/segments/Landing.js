@@ -8,7 +8,7 @@ const Landing = () => (
     <Suspense fallback={Renderloader()}>
         <div id="landing" className="h-full">
             <div className="h-full flex flex-col items-center justify-center">
-                <Title title={'Pieter Rees'} />
+                <Title large={true} title={'Pieter Rees'} />
                 <Title title={'I make web things, and more'} />
 
                 {/* <h1 className="text-center text-black dark:text-white">

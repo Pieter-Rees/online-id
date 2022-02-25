@@ -7,7 +7,7 @@ const Navigation = (props) => (
         <div className="fixed h-full right-0 p-2 lg:px-4 xl:px-6 rounded-3xl ease-in-out duration-100">
             <div className="flex h-full items-center">
                 <div className="flex items-center">
-                    <ul className="text-xl m-0 p-0">
+                    <ul className="m-0 p-0">
                         <li>
                             <Link
                                 activeClass="text-red dark:text-red"
