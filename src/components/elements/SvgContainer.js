@@ -9,7 +9,7 @@ function size(props) {
         case 'large':
             return 'w-48 h-48'
         default:
-            return 'w-6 h-6 lg:w-10 lg:h-10'
+            return 'w-4 h-4 lg:w-6 lg:h-6'
     }
 }
 
@@ -17,7 +17,7 @@ const SvgContainer = (props) => (
     <div
         className={`mx-auto ease-in-out ${
             props.inline ? 'inline-flex mx-1' : ''
-        } duration-100 fill-${props.color} ${size(props)}`}
+        } duration-100 ${size(props)}`}
     >
         {props.svg}
     </div>

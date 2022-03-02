@@ -7,7 +7,7 @@ const ModeToggle = lazy(() => import('../elements/ModeToggle'))
 
 const Social = (props) => (
     <Suspense fallback={Renderloader()}>
-        <div className="fixed left-0 bottom-0 m-4 p-2 lg:px-4 xl:px-6 rounded-3xl shadow-xl backdrop-blur-sm ease-in-out duration-100 border-white border-solid border-2">
+        <div className="fixed left-0 bottom-0 m-4 p-2 rounded-3xl shadow-xl backdrop-blur-sm ease-in-out duration-100 border-white border-solid border-2">
             <div className="flex items-center">
                 <div className="mx-2">
                     <a
@@ -16,7 +16,7 @@ const Social = (props) => (
                         rel="noreferrer"
                         href="https://github.com/pieter-rees"
                     >
-                        <SvgContainer svg={<Github />} color="white" />
+                        <SvgContainer svg={<Github />} />
                     </a>
                 </div>
 
