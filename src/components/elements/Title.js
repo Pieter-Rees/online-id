@@ -1,12 +1,17 @@
+function size(props) {
+    switch (props.size) {
+        case 'xsmall':
+        case 'large':
+            return 'text-lg'
+        default:
+            return 'text-xl'
+    }
+}
+
 const Title = (props) => (
-    <h2
-        className={
-            'text-center text-black dark:text-red ' +
-            (props.large ? 'text-5xl' : 'text-xl ')
-        }
-    >
+    <div className={`mx-auto ease-in-out duration-100 ${size(props)}`}>
         {props.title}
-    </h2>
+    </div>
 )
 
 export default Title
