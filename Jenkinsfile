@@ -13,9 +13,20 @@ pipeline {
             }
         }
         stage('Deploy') {
+            agent any
             steps {
-                echo 'Deploying....'
+                sshPublisher(
+                continueOnError: false, 
+                failOnError: true,
+                publishers: [
+                    sshPublisherDesc(
+                    configName: "pieterrees.nl",
+                    transfers: [sshTransfer(sourceFiles: 'my-app.jar')],
+                    verbose: true
+                    )
+                ]
+                )
             }
-        }
+        }   
     }
 }
