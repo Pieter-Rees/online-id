@@ -4,7 +4,6 @@ import Renderloader from '../elements/Renderloader'
 
 const Container = lazy(() => import('../elements/Container'))
 const ResumeContent = lazy(() => import('../segments/ResumeContent'))
-const ResumeLanding = lazy(() => import('../segments/ResumeLanding'))
 const Social = lazy(() => import('../elements/Social'))
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
             <Suspense fallback={Renderloader()}>
                 <Social />
 
-                <Container fullHeight={true} content={<ResumeLanding />} />
+                {/* <Container fullHeight={true} content={<ResumeLanding />} /> */}
 
                 <Container content={<ResumeContent />} />
             </Suspense>

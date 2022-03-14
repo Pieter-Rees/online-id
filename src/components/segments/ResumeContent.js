@@ -27,7 +27,9 @@ export default class Resume extends React.Component {
             <div className="col">
                 {this.state.posts.map((post, i) => (
                     <div key={i}>
-                        <h4>{post.title}</h4>
+                        <h4 className="text-black dark:text-white">
+                            {post.title}
+                        </h4>
                         <h5>{post.subTitle}</h5>
                         <ul>
                             {post.powers.map((power, i) => (
