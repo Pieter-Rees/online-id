@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../App.css'
 import { lazy, Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'

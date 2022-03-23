@@ -1,3 +1,4 @@
+import React from 'react'
 function size(props) {
     switch (props.size) {
         case 'xsmall':

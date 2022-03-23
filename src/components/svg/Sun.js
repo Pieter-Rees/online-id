@@ -1,3 +1,4 @@
+import React from 'react'
 const Sun = () => (
     <svg
         className="dark:fill-white hover:fill-red"

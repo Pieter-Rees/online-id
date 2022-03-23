@@ -1,3 +1,5 @@
+import React from 'react'
+
 function IsAvailable(props) {
     const Available = props.Available
     if (Available) {

@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 import Home from './components/pages/Home'
 import Resume from './components/pages/Resume'
