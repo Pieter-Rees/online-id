@@ -1,3 +1,4 @@
+import React from 'react'
 import { lazy, Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 const SvgContainer = lazy(() => import('./SvgContainer'))
@@ -11,9 +12,9 @@ const Social = (props) => (
             <div className="flex items-center">
                 <div className="mx-2">
                     <a
+                        rel="noopener noreferrer"
                         aria-label="Github"
                         target="_blank"
-                        rel="noreferrer"
                         href="https://github.com/pieter-rees"
                     >
                         <SvgContainer svg={<Github />} />
@@ -22,9 +23,9 @@ const Social = (props) => (
 
                 <div className="mx-2">
                     <a
+                        rel="noopener noreferrer"
                         aria-label="Linkedin"
                         target="_blank"
-                        rel="noreferrer"
                         href="https://www.linkedin.com/in/pieter-rees-1299a52a/"
                     >
                         <SvgContainer svg={<Linkedin />} />
@@ -35,9 +36,9 @@ const Social = (props) => (
                 </span>
                 <div className="mx-2 flex items-center">
                     <a
+                        rel="noopener noreferrer"
                         aria-label="Email"
                         target="_blank"
-                        rel="noreferrer"
                         href="mailto:pieter@pieterrees.nl"
                         className="ease-in-out duration-100 text-sm text-black dark:text-white hover:text-red font-bold"
                     >

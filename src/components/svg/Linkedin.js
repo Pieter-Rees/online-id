@@ -1,3 +1,4 @@
+import React from 'react'
 const Linkedin = () => (
     <svg
         className="dark:fill-white hover:fill-red"

@@ -1,13 +1,20 @@
 pipeline {
     agent any
+    tools {nodejs "nodejs"}
     stages {
+        stage('Install') {
+            steps {
+                echo 'Installing..'
+                sh 'npm install'
+            }
+        }   
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'npm run build'
+
             }
-        }
+        }  
         stage('Deploy') {
-            agent any
             steps {
                 sshPublisher(
                 continueOnError: false, 
@@ -15,7 +22,7 @@ pipeline {
                 publishers: [
                     sshPublisherDesc(
                     configName: "pieterrees.nl",
-                    transfers: [sshTransfer(sourceFiles: 'my-app.jar')],
+                    transfers: [sshTransfer(sourceFiles: 'build/**', removePrefix: 'build')],
                     verbose: true
                     )
                 ]

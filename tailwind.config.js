@@ -5,15 +5,14 @@ module.exports = {
     theme: {
         cursor: { crosshair: 'crosshair' },
         fontSize: {
-            base: '1rem',
-            lg: '2rem',
+            base: '1.2rem',
+            lg: '1.6rem',
             xl: '3rem',
-            '4xl': '4rem',
-            '5xl': '5rem',
-            '6xl': '6rem',
-            '7xl': '7rem',
-            '8xl': '8rem',
-            '9xl': '9rem',
+            xxl: '4rem',
+            xxxl: '5rem',
+            xxxxl: '6rem',
+            xxxxxl: '7rem',
+            xxxxxxl: '8rem',
         },
         screens: {
             sm: '480px',
