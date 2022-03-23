@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Install') {
             steps {
                 echo 'Installing..'
                 npm install
@@ -12,21 +12,21 @@ pipeline {
                 npm run build
             }
         }
-        stage('Deploy') {
-            agent any
-            steps {
-                sshPublisher(
-                continueOnError: false, 
-                failOnError: true,
-                publishers: [
-                    sshPublisherDesc(
-                    configName: "pieterrees.nl",
-                    transfers: [sshTransfer(sourceFiles: 'my-app.jar')],
-                    verbose: true
-                    )
-                ]
-                )
-            }
-        }   
+        // stage('Deploy') {
+        //     agent any
+        //     steps {
+        //         sshPublisher(
+        //         continueOnError: false, 
+        //         failOnError: true,
+        //         publishers: [
+        //             sshPublisherDesc(
+        //             configName: "pieterrees.nl",
+        //             transfers: [sshTransfer(sourceFiles: '/dist')],
+        //             verbose: true
+        //             )
+        //         ]
+        //         )
+        //     }
+        // }   
     }
 }   
