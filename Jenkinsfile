@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                nodejs(nodeJSInstallationName: 'NodeJS 17.8.0', configId: '<config-file-provider-id>') {
+                nodejs(nodeJSInstallationName: 'nodejs', configId: '<config-file-provider-id>') {
                     sh 'npm config ls'
                 }
                 echo 'Installing..'
