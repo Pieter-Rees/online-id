@@ -15,22 +15,6 @@ pipeline {
                 sh 'npm run build'
 
             }
-        }
-        // stage('Deploy') {
-        //     agent any
-        //     steps {
-        //         sshPublisher(
-        //         continueOnError: false, 
-        //         failOnError: true,
-        //         publishers: [
-        //             sshPublisherDesc(
-        //             configName: "pieterrees.nl",
-        //             transfers: [sshTransfer(sourceFiles: '/dist')],
-        //             verbose: true
-        //             )
-        //         ]
-        //         )
-        //     }
-        // }   
+        }  
     }
 }   
