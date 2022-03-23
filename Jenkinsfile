@@ -22,7 +22,7 @@ pipeline {
                 publishers: [
                     sshPublisherDesc(
                     configName: "pieterrees.nl",
-                    transfers: [sshTransfer(sourceFiles: '/build/*')],
+                    transfers: [sshTransfer(sourceFiles: 'build/**')],
                     verbose: true
                     )
                 ]
