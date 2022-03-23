@@ -9,7 +9,11 @@ function size(props) {
 }
 
 const Title = (props) => (
-    <div className={`mx-auto ease-in-out duration-100 ${size(props)}`}>
+    <div
+        className={`mx-auto ease-in-out duration-100 text-center text-black dark:text-white ${size(
+            props
+        )}`}
+    >
         {props.title}
     </div>
 )
