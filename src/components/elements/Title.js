@@ -3,6 +3,12 @@ function size(props) {
         case 'xsmall':
         case 'large':
             return 'text-lg'
+        case 'xl':
+            return 'text-xl'
+        case 'xxl':
+            return 'text-xxl'
+        case 'xxxl':
+            return 'text-xxxl'
         default:
             return 'text-xl'
     }

@@ -15,7 +15,6 @@ pipeline {
             }
         }  
         stage('Deploy') {
-            agent any
             steps {
                 sshPublisher(
                 continueOnError: false, 

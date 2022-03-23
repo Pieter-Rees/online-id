@@ -8,8 +8,8 @@ const Landing = () => (
     <Suspense fallback={Renderloader()}>
         <div id="landing" className="h-full">
             <div className="h-full flex flex-col items-center justify-center">
-                <Title xlarge={true} title={'Pieter Rees'} />
-                <Title title={'I make web things, and more'} />
+                <Title size={'xxxl'} title={'Pieter Rees'} />
+                <Title size={'xl'} title={'I make web things, and more'} />
 
                 {/* <h1 className="text-center text-black dark:text-white">
                     Pieter
@@ -19,7 +19,7 @@ const Landing = () => (
                     </Link>
                     ees
                 </h1> */}
-                {/* <h2 className="text-center text-black mt-8 text-4xl dark:text-white">
+                {/* <h2 className="text-center text-black mt-8 text-xxl dark:text-white">
                     I make
                     <span className="dark:text-white"> web </span>
                     things, and more
