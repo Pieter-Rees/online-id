@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Installing..'
+                npm install
+            }
+        }
+        stage('Build') {
+            steps {
+                npm run build
             }
         }
         stage('Deploy') {
