@@ -1,5 +1,10 @@
 import React from 'react'
-function GetYear() {
+
+type Props = {
+    GetYear: object,
+  }
+
+function GetYear(Props) {
     return '1989 - ' + new Date().getFullYear()
 }
 

@@ -1,7 +1,12 @@
 import React from 'react'
-const Paragraph = (props) => (
+
+type Props = {
+    content: any
+  }
+
+const Paragraph = ({content}: Props) => (
     <p className="mt-8 text-base xl:text-lg text-black dark:text-white">
-        {props.content}
+        {content}
     </p>
 )
 
