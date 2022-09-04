@@ -1,4 +1,3 @@
-import React from 'react'
 const Container = (props) => (
     <section
         className={`container mx-auto px-8 

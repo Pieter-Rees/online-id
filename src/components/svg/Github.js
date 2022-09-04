@@ -1,4 +1,3 @@
-import React from 'react'
 const Github = () => (
     <svg
         className="dark:fill-white hover:fill-red"

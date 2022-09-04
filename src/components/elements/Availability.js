@@ -1,5 +1,3 @@
-import React from 'react'
-
 function IsAvailable(props) {
     const Available = props.Available
     if (Available) {
@@ -11,7 +9,7 @@ function IsAvailable(props) {
 const Availability = (props) => (
     <div>
         <p className="dark:text-white text-lg">
-            Availability for freelance work:{' '}
+            Availability for freelance work:
         </p>
         <p className="text-center mt-4 dark:text-white text-lg">
             <IsAvailable Available={props.available} />

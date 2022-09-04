@@ -12,7 +12,7 @@ export default class Resume extends React.Component {
         axios
             .get(baseURL, {
                 auth: {
-                    username: 'ben',
+                    username: 'not yet finished',
                     password: 'my-favorite-password', // Bad password
                 },
             })

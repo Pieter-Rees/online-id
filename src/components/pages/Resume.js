@@ -22,3 +22,5 @@ function App() {
 }
 
 export default App
+
+//Todo: Implement hidden resume ;)

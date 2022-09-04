@@ -1,4 +1,3 @@
-import React from 'react'
 function GetYear() {
     return '1989 - ' + new Date().getFullYear()
 }

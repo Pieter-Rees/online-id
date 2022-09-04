@@ -1,4 +1,3 @@
-import React from 'react'
 import P from '../../img/p.webp'
 
 const Image = (props) => (

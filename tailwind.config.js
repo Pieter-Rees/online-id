@@ -25,8 +25,6 @@ module.exports = {
             white: '#f8f8ff',
             black: '#000',
             red: '#e53e3e',
-            yellow: '#ffff00',
-            toxic: '#61de2a',
         },
     },
     variants: {

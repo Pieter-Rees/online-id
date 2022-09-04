@@ -10,7 +10,6 @@ class Toggle extends React.Component {
 
         // This binding is necessary to make `this` work in the callback
         this.handleClick = this.handleClick.bind(this)
-        debugger
         if (localStorage.theme === 'light') {
             document.documentElement.classList.add('light')
             this.state.isToggleOn = true
@@ -24,7 +23,6 @@ class Toggle extends React.Component {
         this.setState((prevState) => ({
             isToggleOn: !prevState.isToggleOn,
         }))
-        // const localStorageTheme = localStorage.theme
 
         if (this.state.isToggleOn) {
             document.documentElement.classList.add('dark')
@@ -44,9 +42,13 @@ class Toggle extends React.Component {
                 onClick={this.handleClick}
             >
                 {this.state.isToggleOn ? (
-                    <SvgContainer svg=<Moon /> />
+                    <div>
+                        <SvgContainer svg=<Moon /> />
+                    </div>
                 ) : (
-                    <SvgContainer svg=<Sun /> />
+                    <div>
+                        <SvgContainer svg=<Sun /> />
+                    </div>
                 )}
             </button>
         )

@@ -1,4 +1,3 @@
-import React from 'react'
 const Tag = () => (
     <svg
         className="fill-black dark:fill-white hover:fill-red"
