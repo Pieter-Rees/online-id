@@ -20,16 +20,16 @@ function App() {
                 <Social />
                 <Navigation />
                 <Container fullHeight={true} content={<Landing />} />
-                <Container smallContainer={true} content={<About />} />
+                <Container fullHeight={false} content={<About />} />
                 <Hr />
 
-                <Container content={<Skills />} />
+                <Container fullHeight={false} content={<Skills />} />
                 <Hr />
 
-                <Container content={<Exitement />} />
+                <Container fullHeight={false} content={<Exitement />} />
                 <Hr />
 
-                <Container content={<Work />} />
+                <Container fullHeight={false} content={<Work />} />
                 <Hr />
 
                 <Footer />

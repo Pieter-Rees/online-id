@@ -27,8 +27,13 @@ const Work = () => (
                         </a>
                     </div>
                 </div>
-                <div className="flex items-center justify-center">
-                    <Availability available={true} />
+                <div className="flex flex-col items-center justify-center">
+                    <p className="dark:text-white text-lg">
+                        Availability for freelance work:
+                    </p>
+                    <p className="text-center mt-4 dark:text-white text-lg">
+                        <Availability available={true} />
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,9 @@
-const Container = (props) => (
+interface ContainerProps {
+    fullHeight: boolean,
+    content: any,
+}
+
+const Container = (props: ContainerProps) => (
     <section
         className={`container mx-auto px-8 
         ${props.fullHeight ? 'h-screen' : ''}`}
