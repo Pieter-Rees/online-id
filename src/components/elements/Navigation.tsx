@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 import { Link } from 'react-scroll'
 
-const Navigation = (props) => (
+const Navigation = () => (
     <Suspense fallback={Renderloader()}>
         <div className="fixed h-full right-0 p-2 lg:px-4 xl:px-6 rounded-3xl ease-in-out duration-100">
             <div className="flex h-full items-center">

@@ -1,4 +1,10 @@
-function size(props) {
+interface TitleProps {
+    size?: string,
+    title?: string,
+    large?: boolean
+}
+
+function size(props: TitleProps) {
     switch (props.size) {
         case 'xsmall':
         case 'large':
@@ -14,7 +20,7 @@ function size(props) {
     }
 }
 
-const Title = (props) => (
+const Title = (props: TitleProps) => (
     <div
         className={`mx-auto ease-in-out duration-100 text-center text-black dark:text-white ${size(
             props

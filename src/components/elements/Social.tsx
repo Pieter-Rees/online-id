@@ -5,7 +5,7 @@ const Linkedin = lazy(() => import('../svg/Linkedin'))
 const Github = lazy(() => import('../svg/Github'))
 const ModeToggle = lazy(() => import('../elements/ModeToggle'))
 
-const Social = (props) => (
+const Social = () => (
     <Suspense fallback={Renderloader()}>
         <div className="fixed left-0 bottom-0 m-4 p-2 rounded-3xl shadow-xl backdrop-blur-sm ease-in-out duration-100 border-white border-solid border-2">
             <div className="flex items-center">

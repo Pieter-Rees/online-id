@@ -21,9 +21,13 @@
       "jsx": "react-jsx",
       "noImplicitAny": false,
       "paths": {
-        "@/*": ["src/*"]
+        "@/*": ["./src/*"]
       },
     },
-    "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules"]
+    "include": ["**/*.ts", "**/*.tsx", "src/components/segments/ResumeContent.js"],
+    "exclude": ["node_modules"],
+    "rules": {
+      "no-any": true
+    }
+
   }

@@ -8,7 +8,7 @@ export default class Resume extends React.Component {
         posts: [],
     }
 
-    componentDidMount() {
+    componentDidMount(props: IProps) {
         axios
             .get(baseURL, {
                 auth: {

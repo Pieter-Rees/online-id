@@ -3,20 +3,29 @@ import SvgContainer from './SvgContainer'
 import Moon from '../svg/Moon'
 import Sun from '../svg/Sun'
 
-class Toggle extends React.Component {
-    constructor(props) {
+interface IProps {
+
+}
+
+interface IState {
+    isToggleOn?: boolean;
+}
+
+
+class Toggle extends React.Component<IProps, IState> {
+    constructor(props: IProps) {
         super(props)
         this.state = { isToggleOn: false }
 
         // This binding is necessary to make `this` work in the callback
         this.handleClick = this.handleClick.bind(this)
-        if (localStorage.theme === 'light') {
-            document.documentElement.classList.add('light')
-            this.state.isToggleOn = true
-        } else {
-            this.state.isToggleOn = false
-            document.documentElement.classList.add('dark')
-        }
+        // if (localStorage.theme === 'light') {
+        //     document.documentElement.classList.add('light')
+        //     this.state.isToggleOn = true
+        // } else {
+        //     this.state.isToggleOn = false
+        //     document.documentElement.classList.add('dark')
+        // }
     }
 
     handleClick() {
