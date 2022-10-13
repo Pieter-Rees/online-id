@@ -3,7 +3,8 @@ import { lazy, Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 
 const Container = lazy(() => import('../elements/Container'))
-const ResumeContent = lazy(() => import('../segments/ResumeContent'))
+const ResumeLanding = lazy(() => import('../segments/ResumeLanding'))
+// const ResumeContent = lazy(() => import('../segments/ResumeContent'))
 const Social = lazy(() => import('../elements/Social'))
 
 function App() {
@@ -12,9 +13,9 @@ function App() {
             <Suspense fallback={Renderloader()}>
                 <Social />
 
-                {/* <Container fullHeight={true} content={<ResumeLanding />} /> */}
+                <Container fullHeight={true} content={<ResumeLanding />} />
 
-                <Container fullHeight={true} content={<ResumeContent />} />
+                {/* <Container fullHeight={true} content={<ResumeContent />} /> */}
             </Suspense>
         </div>
     )
