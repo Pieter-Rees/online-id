@@ -1,6 +1,4 @@
-export default interface ITutorialData {
-    id?: any | null,
+export default interface ResumeProps {
     title: string,
-    description: string,
-    published?: boolean,
+    powers: any | null
   }

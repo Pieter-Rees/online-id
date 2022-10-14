@@ -1,7 +1,22 @@
 import React from 'react'
-import ResumeContent from "../segments/ResumeContent";
+import ResumeContent from "./ResumeContent";
+import ResumeProps from "../../types/resume.type";
 
-export default class Resume extends React.Component {
+type Props = {};
+
+type State = {
+    data: Array<ResumeProps>,
+};
+
+export default class Resume extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+            data: [],
+        };
+    }
+
     componentDidMount() {
         this.getData();
     }
@@ -11,9 +26,9 @@ export default class Resume extends React.Component {
             .then((response: any) => {
                 console.log(response.data);
 
-                // this.setState({
-                //     tutorials: response.data
-                // });
+                this.setState({
+                    data: response.data
+                });
             })
             .catch((e: Error) => {
                 console.log(e);
@@ -21,6 +36,24 @@ export default class Resume extends React.Component {
     }
 
     render() {
-        return <div className="col text-white">Not yet implemented</div>
+        return (
+            <div>
+                {this.state.data.map((piece, index) => {
+                    return <div key={index}>
+                        <h1 className='text-white'>{piece.title}</h1>
+                        {piece.powers.map((power, index) => {
+                            return <div className='text-white' key={index}>{power}</div>
+                        })}
+                    </div>
+                })}
+            </div>
+        )
+        // return this.state.data.map((piece) => {
+        //     return piece.powers.map((power) => (
+        //         <div>
+        //             {power}
+        //         </div>
+        //     ));
+        // });
     }
 }

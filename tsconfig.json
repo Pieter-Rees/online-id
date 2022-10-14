@@ -24,7 +24,7 @@
         "@/*": ["./src/*"]
       },
     },
-    "include": ["**/*.ts", "**/*.tsx", "src/components/segments/ResumeContent.js", "src/components/pages/Resume.js"],
+    "include": ["**/*.ts", "**/*.tsx", "src/components/segments/ResumeContent.js", "src/components/pages/Resume.js", "src/components/segments/ResumeLanding.js"],
     "exclude": ["node_modules"],
     "rules": {
       "no-any": true
