@@ -11,9 +11,9 @@ export default class Resume extends React.Component {
             .then((response: any) => {
                 console.log(response.data);
 
-                this.setState({
-                    tutorials: response.data
-                });
+                // this.setState({
+                //     tutorials: response.data
+                // });
             })
             .catch((e: Error) => {
                 console.log(e);

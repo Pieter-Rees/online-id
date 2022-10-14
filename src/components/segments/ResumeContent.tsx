@@ -6,9 +6,9 @@ class ResumeDataService {
         return http.get<Array<ResumeData>>("resume");
     }
 
-    // get(id: string) {
-    //     return http.get<ResumeData>(`/resume/${id}`);
-    // }
+    get(id: string) {
+        return http.get<ResumeData>(`/resume/${id}`);
+    }
 
     //   create(data: ResumeData) {
     //     return http.post<ResumeData>("/tutorials", data);
