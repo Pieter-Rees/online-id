@@ -6,6 +6,7 @@ type Props = {};
 
 type State = {
     data: Array<ResumeProps>,
+    powers: Array<ResumeProps>,
 };
 
 export default class Resume extends React.Component<Props, State> {
@@ -14,6 +15,7 @@ export default class Resume extends React.Component<Props, State> {
 
         this.state = {
             data: [],
+            powers: [],
         };
     }
 
