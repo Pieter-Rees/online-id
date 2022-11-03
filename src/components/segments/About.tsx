@@ -5,6 +5,9 @@ const Title = lazy(() => import('../elements/Title'))
 const Paragraph = lazy(() => import('../elements/Paragraph'))
 const Image = lazy(() => import('../elements/Image'))
 
+const AboutText =
+    'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.'
+
 const About = () => (
     <Suspense fallback={Renderloader()}>
         <div id="about">
@@ -18,11 +21,7 @@ const About = () => (
                     </div>
                 </div>
                 <div className="flex items-center">
-                    <Paragraph
-                        content={
-                            'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.'
-                        }
-                    />
+                    <Paragraph content={AboutText} />
                 </div>
             </div>
         </div>
