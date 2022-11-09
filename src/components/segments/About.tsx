@@ -1,3 +1,4 @@
+import React from 'react'
 import { lazy, Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 
@@ -5,13 +6,15 @@ const Title = lazy(() => import('../elements/Title'))
 const Paragraph = lazy(() => import('../elements/Paragraph'))
 const Image = lazy(() => import('../elements/Image'))
 
-const AboutText =
-    'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.'
-
+const AboutContent = {
+    title: 'This guy..',
+    content:
+        'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.',
+}
 const About = () => (
     <Suspense fallback={Renderloader()}>
         <div id="about">
-            <Title size={'xxl'} title={'This guy..'} />
+            <Title size={'xxl'} title={AboutContent.title} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-48 mx-auto mt-8">
                 <div className="flex self-center justify-center">
                     <div className="flex overflow-hidden items-center">
@@ -21,7 +24,7 @@ const About = () => (
                     </div>
                 </div>
                 <div className="flex items-center">
-                    <Paragraph content={AboutText} />
+                    <Paragraph content={AboutContent.content} />
                 </div>
             </div>
         </div>

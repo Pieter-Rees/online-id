@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 import { Link } from 'react-scroll'

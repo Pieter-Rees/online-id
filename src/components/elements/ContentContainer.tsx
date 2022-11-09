@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { lazy, Suspense } from 'react'
 import Renderloader from './Renderloader'
 
@@ -6,9 +8,9 @@ import Paragraph from './Paragraph'
 const Title = lazy(() => import('./Title'))
 
 interface ContentContainerProps {
-    title?: string,
-    image?: JSX.Element,
-    content: string,
+    title?: string
+    image?: JSX.Element
+    content: string
 }
 
 const ContentContainer = (props: ContentContainerProps) => (
@@ -21,9 +23,7 @@ const ContentContainer = (props: ContentContainerProps) => (
                 </div>
             ) : null}
 
-            <Paragraph
-                content={props.content}
-            ></Paragraph>
+            <Paragraph content={props.content}></Paragraph>
         </div>
     </Suspense>
 )

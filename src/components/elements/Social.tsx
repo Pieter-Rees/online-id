@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { lazy, Suspense } from 'react'
 import Renderloader from '../elements/Renderloader'
 const SvgContainer = lazy(() => import('./SvgContainer'))

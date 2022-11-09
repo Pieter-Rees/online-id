@@ -1,11 +1,12 @@
-function GetYear() {
-    return (
-        <span>
-            '1989 - ' + new Date().getFullYear()
-        </span>
-    )
+import React from 'react'
+
+interface FooterDateProps {
+    year?: string
 }
 
-const FooterDate = () => <GetYear />
+function FooterDate(props: FooterDateProps) {
+    const d = new Date().getFullYear().toString()
+    return <span>1989 - {d}</span>
+}
 
 export default FooterDate

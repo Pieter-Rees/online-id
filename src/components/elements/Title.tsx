@@ -1,6 +1,7 @@
+import React from 'react'
 interface TitleProps {
-    size?: string,
-    title?: string,
+    size?: string
+    title?: string
     large?: boolean
 }
 
