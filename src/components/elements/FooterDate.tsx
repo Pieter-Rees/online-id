@@ -1,10 +1,6 @@
 import React from 'react'
 
-interface FooterDateProps {
-  year?: string
-}
-
-function FooterDate (props: FooterDateProps) {
+function FooterDate() {
   const d = new Date().getFullYear().toString()
   return <span>1989 - {d}</span>
 }

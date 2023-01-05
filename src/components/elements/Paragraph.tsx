@@ -1,6 +1,6 @@
 import React from 'react'
 interface ParagraphProps {
-  content: string
+    content: string
 }
 
 const Paragraph = (props: ParagraphProps) => (

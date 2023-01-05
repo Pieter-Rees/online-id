@@ -13,27 +13,25 @@ const Social = lazy(async () => await import('../elements/Social'))
 const Navigation = lazy(async () => await import('../elements/Navigation'))
 const Hr = lazy(async () => await import('../elements/Hr'))
 const Container = lazy(async () => await import('../elements/Container'))
-const Test = lazy(async () => await import('../elements/Test'))
 
 function App () {
   return (
-        <div className='dark:bg-black'>
-            <Suspense fallback={Renderloader()}>
-                <Social />
-                <Navigation />
-                <Test />
-                <Container content={<Landing />} fullHeight={true} />
-                <Container content={<About />} fullHeight={false} />
-                <Hr />
-                <Container content={<Skills />} fullHeight={false} />
-                <Hr />
-                <Container content={<Exitement />} fullHeight={false} />
-                <Hr />
-                <Container content={<Work />} fullHeight={false} />
-                <Hr />
-                <Footer />
-            </Suspense>
-        </div>
+    <div className='dark:bg-black'>
+      <Suspense fallback={Renderloader()}>
+        <Social />
+        <Navigation />
+        <Container content={<Landing />} fullHeight={true} />
+        <Container content={<About />} fullHeight={false} />
+        <Hr />
+        <Container content={<Skills />} fullHeight={false} />
+        <Hr />
+        <Container content={<Exitement />} fullHeight={false} />
+        <Hr />
+        <Container content={<Work />} fullHeight={false} />
+        <Hr />
+        <Footer />
+      </Suspense>
+    </div>
   )
 }
 

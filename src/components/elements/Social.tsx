@@ -7,7 +7,6 @@ const SvgContainer = lazy(async () => await import('./SvgContainer'))
 const Linkedin = lazy(async () => await import('../svg/Linkedin'))
 const Github = lazy(async () => await import('../svg/Github'))
 const Resume = lazy(async () => await import('../svg/Resume'))
-const ModeToggle = lazy(async () => await import('../elements/ModeToggle'))
 
 const Social = () => (
     <Suspense fallback={Renderloader()}>
@@ -53,9 +52,6 @@ const Social = () => (
                     >
                         pieter@pieterrees.nl
                     </a>
-                </div>
-                <div className='mx-2'>
-                    <ModeToggle />
                 </div>
             </div>
         </div>
