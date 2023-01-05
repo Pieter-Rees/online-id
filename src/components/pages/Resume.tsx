@@ -1,26 +1,26 @@
 import '../../App.css'
-import { lazy, Suspense } from 'react'
+import { Suspense, lazy } from 'react'
 import Renderloader from '../elements/Renderloader'
 
-const Container = lazy(() => import('../elements/Container'))
-const ResumeLanding = lazy(() => import('../segments/ResumeLanding'))
+const Container = lazy(async () => await import('../elements/Container'))
+const ResumeLanding = lazy(async () => await import('../segments/ResumeLanding'))
 // const ResumeContent = lazy(() => import('../segments/ResumeContent'))
-const Social = lazy(() => import('../elements/Social'))
+const Social = lazy(async () => await import('../elements/Social'))
 
-function App() {
-    return (
-        <div className="dark:bg-black">
+function App () {
+  return (
+        <div className='dark:bg-black'>
             <Suspense fallback={Renderloader()}>
                 <Social />
 
-                <Container fullHeight={true} content={<ResumeLanding />} />
+                <Container content={<ResumeLanding />} fullHeight={true} />
 
                 {/* <Container fullHeight={true} content={<ResumeContent />} /> */}
             </Suspense>
         </div>
-    )
+  )
 }
 
 export default App
 
-//Todo: Implement hidden resume ;)
+// Todo: Implement hidden resume ;)

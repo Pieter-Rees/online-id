@@ -12,8 +12,8 @@ root.render(
     <BrowserRouter>
         <Helmet>
             <title>Pieterrees.nl</title>
-            <meta name="description" content="App Description" />
-            <meta name="theme-color" content="#008f68" />
+            <meta content='App Description' name='description' />
+            <meta content='#008f68' name='theme-color' />
             <script>
                 {`(function(){
                 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {

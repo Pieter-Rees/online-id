@@ -1,13 +1,13 @@
-import React from 'react'
-import { lazy, Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 
 import Renderloader from '../elements/Renderloader'
-const Title = lazy(() => import('../elements/Title'))
+
+const Title = lazy(async () => await import('../elements/Title'))
 
 const Landing = () => (
     <Suspense fallback={Renderloader()}>
-        <div id="landing" className="h-full">
-            <div className="h-full flex flex-col items-center justify-center">
+        <div className='h-full' id='landing'>
+            <div className='h-full flex flex-col items-center justify-center'>
                 <Title size={'xxxl'} title={'Pieter Rees'} />
                 <Title size={'xl'} title={'I make web things, and more'} />
             </div>
