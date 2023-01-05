@@ -1,3 +1,4 @@
+import React from 'react'
 const Rc = () => (
     <svg
         className='fill-black dark:fill-white hover:fill-red'

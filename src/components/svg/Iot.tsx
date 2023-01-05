@@ -1,3 +1,4 @@
+import React from 'react'
 const Iot = () => (
     <svg
         className='fill-black dark:fill-white hover:fill-red'

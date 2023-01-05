@@ -3,14 +3,14 @@ import SvgContainer from './SvgContainer'
 import Moon from '../svg/Moon'
 import Sun from '../svg/Sun'
 
-interface IProps {}
+typeof IProps = { }
 
 interface IState {
   isToggleOn?: boolean
 }
 
 class Toggle extends React.Component<IProps, IState> {
-  constructor (props: IProps) {
+  constructor(props: IProps) {
     super(props)
     this.state = { isToggleOn: false }
 
@@ -25,7 +25,7 @@ class Toggle extends React.Component<IProps, IState> {
     // }
   }
 
-  handleClick () {
+  handleClick() {
     this.setState((prevState) => ({
       isToggleOn: !prevState.isToggleOn
     }))
@@ -41,21 +41,21 @@ class Toggle extends React.Component<IProps, IState> {
     }
   }
 
-  render () {
+  render() {
     return (
-            <button className='flex justify-center items-center' onClick={this.handleClick}>
-                {this.state.isToggleOn
-                  ? (
-                    <div>
-                        <SvgContainer svg=<Moon /> />
-                    </div>
-                    )
-                  : (
-                    <div>
-                        <SvgContainer svg=<Sun /> />
-                    </div>
-                    )}
-            </button>
+      <button className='flex justify-center items-center' onClick={this.handleClick}>
+        {this.state.isToggleOn
+          ? (
+            <div>
+              <SvgContainer svg=<Moon /> />
+            </div>
+          )
+          : (
+            <div>
+              <SvgContainer svg=<Sun /> />
+            </div>
+          )}
+      </button>
     )
   }
 }

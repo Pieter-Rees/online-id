@@ -14,16 +14,18 @@ module.exports = {
     sourceType: 'module',
     project: ['tsconfig.json']
   },
-  parser: '@typescript-eslint/parser',
   plugins: [
     'react'
   ],
   rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-sort-props': 'error',
+    'space-before-function-paren': 'off',
+    '@typescript-eslint/space-before-function-paren': 'warn'
   },
   settings: {
     react: {
-        version: 'detect',
-    },
-},
+      version: 'detect'
+    }
+  }
 }

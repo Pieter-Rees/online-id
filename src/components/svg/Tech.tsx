@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Tech = () => (
     <svg className='fill-black dark:fill-white hover:fill-red' viewBox='0 0 64 64'>
         <path d='M5 37v16c0 1.103.897 2 2 2h50c1.103 0 2-.897 2-2V37c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2zm2 0h50v16H7l-.001-16z' />
