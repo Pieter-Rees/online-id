@@ -30,7 +30,7 @@ const Skills = () => (
                 />
                 <ContentContainer
                     content={
-                        'I am getting highly enthusiastic from server side applications, API\'s, NodeJS, Python, databases, security, requests and responds. The whole shebang.'
+                        "I am getting highly enthusiastic from server side applications, API's, NodeJS, Python, databases, security, requests and responds. The whole shebang."
                     }
                     image={
                         <svg
@@ -47,7 +47,7 @@ const Skills = () => (
                 />
                 <ContentContainer
                     content={
-                        'Nothing can reach it\'s potential without a streamlined build and deploy process. Let\'s provide continuous delivery with high software quality.'
+                        "Nothing can reach it's potential without a streamlined build and deploy process. Let's provide continuous delivery with high software quality."
                     }
                     image={
                         <svg

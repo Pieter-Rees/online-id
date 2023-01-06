@@ -6,9 +6,9 @@ const Availability = lazy(async () => await import('../elements/Availability'))
 const ContentContainer = lazy(async () => await import('../elements/ContentContainer'))
 
 const WorkContent = {
-  title: 'Work',
-  content:
-        'Currently I am working @ GoodUp. We provide The #1 tech solution for activating employees on your company purpose. I am always up for a nice talk about innovative ideas.'
+    title: 'Work',
+    content:
+        'Currently I am working @ GoodUp. We provide The #1 tech solution for activating employees on your company purpose. I am always up for a nice talk about innovative ideas.',
 }
 
 const EmailAddress = 'pieter@pieterrees.nl'

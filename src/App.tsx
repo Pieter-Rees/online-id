@@ -10,13 +10,13 @@ import Resume from './components/pages/Resume'
 ReactGA.initialize('UA-156298268-1')
 ReactGA.pageview(window.location.pathname + window.location.search)
 
-function App () {
-  return (
+function App() {
+    return (
         <Routes>
             <Route element={<Home />} path='/' />
             <Route element={<Resume />} path='/' />
         </Routes>
-  )
+    )
 }
 
 export default App

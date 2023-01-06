@@ -14,25 +14,25 @@ const Navigation = lazy(async () => await import('../elements/Navigation'))
 const Hr = lazy(async () => await import('../elements/Hr'))
 const Container = lazy(async () => await import('../elements/Container'))
 
-function App () {
-  return (
-    <div className='dark:bg-black'>
-      <Suspense fallback={Renderloader()}>
-        <Social />
-        <Navigation />
-        <Container content={<Landing />} fullHeight={true} />
-        <Container content={<About />} fullHeight={false} />
-        <Hr />
-        <Container content={<Skills />} fullHeight={false} />
-        <Hr />
-        <Container content={<Exitement />} fullHeight={false} />
-        <Hr />
-        <Container content={<Work />} fullHeight={false} />
-        <Hr />
-        <Footer />
-      </Suspense>
-    </div>
-  )
+function App() {
+    return (
+        <div className='dark:bg-black'>
+            <Suspense fallback={Renderloader()}>
+                <Social />
+                <Navigation />
+                <Container content={<Landing />} fullHeight={true} />
+                <Container content={<About />} fullHeight={false} />
+                <Hr />
+                <Container content={<Skills />} fullHeight={false} />
+                <Hr />
+                <Container content={<Exitement />} fullHeight={false} />
+                <Hr />
+                <Container content={<Work />} fullHeight={false} />
+                <Hr />
+                <Footer />
+            </Suspense>
+        </div>
+    )
 }
 
 export default App

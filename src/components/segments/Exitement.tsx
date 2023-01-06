@@ -11,25 +11,25 @@ const TechLogo = lazy(async () => await import('../svg/Tech'))
 const ExitementTitle = 'Exitement'
 
 const Iot = {
-  title: 'IOT',
-  content:
-        'I enjoy myself with almost everything that has an IP address. From single board computers to home automation systems, I love it all.'
+    title: 'IOT',
+    content:
+        'I enjoy myself with almost everything that has an IP address. From single board computers to home automation systems, I love it all.',
 }
 
 const Rc = {
-  title: 'RC',
-  content:
-        'If it is controllable from a distance, I love it. I am interested DIY drone building and everything related'
+    title: 'RC',
+    content:
+        'If it is controllable from a distance, I love it. I am interested DIY drone building and everything related',
 }
 
 const Linux = {
-  title: 'Linux',
-  content: 'Distrohopper & Linux explorer'
+    title: 'Linux',
+    content: 'Distrohopper & Linux explorer',
 }
 
 const At = {
-  title: '(Ancient) tech',
-  content: 'I will get highly enthusiastic from ancient and not so ancient technology.'
+    title: '(Ancient) tech',
+    content: 'I will get highly enthusiastic from ancient and not so ancient technology.',
 }
 
 const Exitement = () => (

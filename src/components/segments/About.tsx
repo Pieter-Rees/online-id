@@ -6,9 +6,9 @@ const Paragraph = lazy(async () => await import('../elements/Paragraph'))
 const Image = lazy(async () => await import('../elements/Image'))
 
 const AboutContent = {
-  title: 'This guy..',
-  content:
-        'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.'
+    title: 'This guy..',
+    content:
+        'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.',
 }
 const About = () => (
     <Suspense fallback={Renderloader()}>

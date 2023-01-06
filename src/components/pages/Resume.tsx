@@ -8,14 +8,14 @@ import Renderloader from '../elements/Renderloader'
 const Social = lazy(async () => await import('../elements/Social'))
 
 function App() {
-  return (
-    <div className='dark:bg-black'>
-      <Suspense fallback={Renderloader()}>
-        <Social />
-        {/* <Container content={<ResumeLanding />} fullHeight={true} /> */}
-      </Suspense>
-    </div>
-  )
+    return (
+        <div className='dark:bg-black'>
+            <Suspense fallback={Renderloader()}>
+                <Social />
+                {/* <Container content={<ResumeLanding />} fullHeight={true} /> */}
+            </Suspense>
+        </div>
+    )
 }
 
 export default App
