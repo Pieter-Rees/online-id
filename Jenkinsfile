@@ -4,14 +4,15 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                echo 'Installing..'
-                sh 'npm install'
+                echo 'Installing pnpm'
+                sh 'npm install pnpm -g'
+                echo 'Installing with pnpm'
+                sh 'pnpm install'
             }
         }   
         stage('Build') {
             steps {
-                sh 'npm run build'
-
+                sh 'pnpm run build'
             }
         }  
         stage('Deploy') {
