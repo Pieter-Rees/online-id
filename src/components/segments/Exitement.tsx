@@ -35,7 +35,7 @@ const At = {
 const Exitement = () => (
     <Suspense fallback={Renderloader()}>
         <div id='exitement'>
-            <Title large={true} title={ExitementTitle} />
+            <Title size={'xxl'} title={ExitementTitle} />
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
                 <ContentContainer content={Iot.content} image={<IotLogo />} title={Iot.title} />
                 <ContentContainer content={Rc.content} image={<RcLogo />} title={Rc.title} />

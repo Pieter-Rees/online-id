@@ -7,7 +7,7 @@ const ContentContainer = lazy(async () => await import('../elements/ContentConta
 const Skills = () => (
     <Suspense fallback={Renderloader()}>
         <div id='skills'>
-            <Title large={true} title={'Skills'} />
+            <Title size={'xxl'} title={'Skills'} />
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
                 <ContentContainer
