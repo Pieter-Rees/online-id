@@ -16,7 +16,7 @@ const EmailAddress = 'pieter@pieterrees.nl'
 const Work = () => (
     <Suspense fallback={Renderloader()}>
         <div className='' id='work'>
-            <Title large={true} title={WorkContent.title} />
+            <Title size={'xxl'} title={WorkContent.title} />
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-48 mx-auto'>
                 <div className='flex flex-col self-center justify-center'>
                     <div className='flex flex-col items-center'>
