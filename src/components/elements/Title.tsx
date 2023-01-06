@@ -4,6 +4,7 @@ interface TitleProps {
     size?: string
     title?: string
     large?: boolean
+    underline?: string
 }
 
 function size(props: TitleProps) {
@@ -17,6 +18,10 @@ function size(props: TitleProps) {
             return 'text-xxl'
         case 'xxxl':
             return 'text-xxxl'
+        case 'xxxxl':
+            return 'text-xxxxl'
+        case 'xxxxxl':
+            return 'text-xxxxxl'
         default:
             return 'text-xl'
     }
@@ -24,7 +29,7 @@ function size(props: TitleProps) {
 
 const Title = (props: TitleProps) => (
     <div
-        className={`mx-auto ease-in-out duration-100 text-center text-black dark:text-white ${size(
+        className={`px-16 pb-4 mb-10 mx-auto text-center text-black dark:text-white  ${size(
             props,
         )}`}
     >
