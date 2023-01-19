@@ -17,7 +17,7 @@ const About = () => (
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-48 mx-auto mt-8'>
                 <div className='flex self-center justify-center'>
                     <div className='flex overflow-hidden items-center'>
-                        <div className='border-2 border-white border-solid rounded-full overflow-hidden flex justify-center align-center'>
+                        <div className='border-2 border-white border-solid overflow-hidden flex justify-center align-center'>
                             <Image />
                         </div>
                     </div>
