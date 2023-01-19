@@ -11,25 +11,25 @@ function size(props: TitleProps) {
     switch (props.size) {
         case 'xsmall':
         case 'large':
-            return 'text-lg'
+            return 'xl:text-lg'
         case 'xl':
-            return 'text-xl'
+            return 'text-lg lg:text-xl'
         case 'xxl':
-            return 'text-xxl'
+            return 'text-xl lg:text-xxl'
         case 'xxxl':
-            return 'text-xxxl'
+            return 'text-xxl lg:text-xxxl'
         case 'xxxxl':
-            return 'text-xxxxl'
+            return 'text-xxxl lg:text-xxxxl'
         case 'xxxxxl':
-            return 'text-xxxxxl'
+            return 'text-xxxxl lg:text-xxxxxl'
         default:
-            return 'text-xl'
+            return 'text-lg lg:text-xl'
     }
 }
 
 const Title = (props: TitleProps) => (
     <div
-        className={`px-16 pb-4 mb-10 mx-auto text-center text-black dark:text-white  ${size(
+        className={`pb-4 mb-10 mx-auto text-center text-black dark:text-white  ${size(
             props,
         )}`}
     >
