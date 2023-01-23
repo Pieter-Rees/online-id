@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 
 import Renderloader from '../elements/Renderloader'
+import DarkMode from './DarkMode'
 
 const SvgContainer = lazy(async () => await import('./SvgContainer'))
 const Linkedin = lazy(async () => await import('../svg/Linkedin'))
@@ -32,14 +33,6 @@ const Social = () => (
                     </a>
                 </div>
 
-                {/* <div className='mx-2'>
-                    <Link to='/resume'>
-                        <SvgContainer svg={<Resume />} />
-                    </Link>
-                </div>
-                <span className='relative mx-2'>
-                    <span className='absolute bg-grey block w-px h-full border-solid border-grey border-1'></span>
-                </span> */}
                 <div className='mx-2 flex items-center'>
                     <a
                         aria-label='Email'
@@ -50,6 +43,9 @@ const Social = () => (
                     >
                         pieter@pieterrees.nl
                     </a>
+                </div>
+                <div className='mx-2 flex items-center'>
+                    <DarkMode />
                 </div>
             </div>
         </div>
