@@ -16,6 +16,7 @@ const ContentContainer = (props: ContentContainerProps) => (
     <Suspense fallback={Renderloader()}>
         <div className='flex flex-col mt-8'>
             {props.title ? <Title title={props.title} /> : null}
+
             {props.image != null ? (
                 <div className='mt-8'>
                     <SvgContainer size='medium' svg={props.image} />
