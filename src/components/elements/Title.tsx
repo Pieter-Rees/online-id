@@ -30,6 +30,7 @@ function size(props: TitleProps) {
 const Title = (props: TitleProps) => (
     <div
         className={`px-16 pb-4 mx-auto text-center text-black dark:text-white ${size(
+
             props,
         )}`}
     >

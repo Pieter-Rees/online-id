@@ -14,7 +14,7 @@ interface ContentContainerProps {
 
 const ContentContainer = (props: ContentContainerProps) => (
     <Suspense fallback={Renderloader()}>
-        <div className='flex flex-col rounded-3xl mt-8'>
+        <div className='flex flex-col mt-8'>
             {props.title ? <Title title={props.title} /> : null}
 
             {props.image != null ? (
