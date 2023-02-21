@@ -6,3 +6,11 @@ p::first-letter {
     font-size: 150%;
     @apply text-red;
 }
+
+.text-xl::first-letter {
+    @apply text-blue;
+}
+
+.text-lg::first-letter {
+    @apply text-green;
+}
