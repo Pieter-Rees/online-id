@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sun = () => (
     <svg
-        className='fill-black dark:fill-white hover:fill-red'
+        className='fill-white hover:fill-red '
         viewBox='0 0 24 24'
         xmlns='http://www.w3.org/2000/svg'
     >

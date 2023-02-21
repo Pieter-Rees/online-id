@@ -16,7 +16,7 @@ function DarkMode() {
     useEffect(() => {
         document.body.className = theme;
     }, [theme]);
-    return <span onClick={toggleTheme}>{theme == 'light' ? <SvgContainer svg={<Moon />} /> : <SvgContainer svg={<Sun />} />}</span>
+    return <a onClick={toggleTheme}>{theme == 'light' ? <SvgContainer svg={<Moon />} /> : <SvgContainer svg={<Sun />} />}</a>
 }
 
 export default DarkMode
