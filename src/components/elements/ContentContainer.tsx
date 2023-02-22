@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react'
+import { InView } from 'react-intersection-observer'
 
 import Renderloader from './Renderloader'
 
@@ -14,17 +15,27 @@ interface ContentContainerProps {
 
 const ContentContainer = (props: ContentContainerProps) => (
     <Suspense fallback={Renderloader()}>
-        <div className='flex flex-col mt-8'>
-            {props.title ? <Title title={props.title} /> : null}
+        <InView>
+            {({ inView, ref }) => (
+                <div className='flex flex-col mt-8' ref={ref}>
+                    <div
+                        className={`transition-all duration-1000 xl:px-16 pb-4 mx-auto text-center text-black dark:text-white ${
+                            inView ? 'opacity-100' : 'opacity-0'
+                        }`}
+                    >
+                        {props.title ? <Title title={props.title} /> : null}
 
-            {props.image != null ? (
-                <div className='mt-8'>
-                    <SvgContainer size='medium' svg={props.image} />
+                        {props.image != null ? (
+                            <div className='mt-8'>
+                                <SvgContainer size='medium' svg={props.image} />
+                            </div>
+                        ) : null}
+
+                        <Paragraph content={props.content}></Paragraph>
+                    </div>
                 </div>
-            ) : null}
-
-            <Paragraph content={props.content}></Paragraph>
-        </div>
+            )}
+        </InView>
     </Suspense>
 )
 

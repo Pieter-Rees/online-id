@@ -2,8 +2,8 @@ import { Suspense, lazy } from 'react'
 import Renderloader from '../elements/Renderloader'
 
 const Title = lazy(async () => await import('../elements/Title'))
-const Paragraph = lazy(async () => await import('../elements/Paragraph'))
 const Image = lazy(async () => await import('../elements/Image'))
+const ContentContainer = lazy(async () => await import('../elements/ContentContainer'))
 
 const AboutContent = {
     title: 'This guy..',
@@ -23,7 +23,7 @@ const About = () => (
                     </div>
                 </div>
                 <div className='flex items-center'>
-                    <Paragraph content={AboutContent.content} />
+                    <ContentContainer content={AboutContent.content} />
                 </div>
             </div>
         </div>
