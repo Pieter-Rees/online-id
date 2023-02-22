@@ -7,6 +7,7 @@ const IotLogo = lazy(async () => await import('../svg/Iot'))
 const RcLogo = lazy(async () => await import('../svg/Rc'))
 const LinuxLogo = lazy(async () => await import('../svg/Linux'))
 const TechLogo = lazy(async () => await import('../svg/Tech'))
+const Fader = lazy(async () => await import('../elements/Fader'))
 
 const ExitementTitle = 'Exitement'
 
@@ -35,16 +36,46 @@ const At = {
 const Exitement = () => (
     <Suspense fallback={Renderloader()}>
         <div id='exitement'>
-            <Title size={'xxl'} title={ExitementTitle} />
+            <Fader content={<Title size={'xxl'} title={ExitementTitle} />} />
+
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
-                <ContentContainer content={Iot.content} image={<IotLogo />} title={Iot.title} />
-                <ContentContainer content={Rc.content} image={<RcLogo />} title={Rc.title} />
-                <ContentContainer
-                    content={Linux.content}
-                    image={<LinuxLogo />}
-                    title={Linux.title}
+                <Fader
+                    content={
+                        <ContentContainer
+                            content={Iot.content}
+                            image={<IotLogo />}
+                            title={Iot.title}
+                        />
+                    }
                 />
-                <ContentContainer content={At.content} image={<TechLogo />} title={At.title} />
+
+                <Fader
+                    content={
+                        <ContentContainer
+                            content={Rc.content}
+                            image={<RcLogo />}
+                            title={Rc.title}
+                        />
+                    }
+                />
+                <Fader
+                    content={
+                        <ContentContainer
+                            content={Linux.content}
+                            image={<LinuxLogo />}
+                            title={Linux.title}
+                        />
+                    }
+                />
+                <Fader
+                    content={
+                        <ContentContainer
+                            content={At.content}
+                            image={<TechLogo />}
+                            title={At.title}
+                        />
+                    }
+                />
             </div>
         </div>
     </Suspense>

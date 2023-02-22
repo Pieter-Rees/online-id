@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 
 import Renderloader from '../elements/Renderloader'
+const Fader = lazy(async () => await import('../elements/Fader'))
 
 const Title = lazy(async () => await import('../elements/Title'))
 
@@ -8,8 +9,9 @@ const Landing = () => (
     <Suspense fallback={Renderloader()}>
         <div className='h-full' id='landing'>
             <div className='h-full flex flex-col items-center justify-center'>
-                <Title size={'xxxxl'} title={'Pieter Rees'} />
-                <Title size={'xxl'} title={'I make web things, and more'} />
+                <Fader content={<Title size={'xxxxl'} title={'Pieter Rees'} />} />
+
+                <Fader content={<Title size={'xxl'} title={'I make web things, and more'} />} />
             </div>
         </div>
     </Suspense>
