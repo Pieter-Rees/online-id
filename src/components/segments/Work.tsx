@@ -31,9 +31,9 @@ const Work = () => (
                         </a>
                     </div>
                 </div>
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col justify-center'>
                     <p className='dark:text-white text-lg'>Availability for freelance work:</p>
-                    <p className='text-center mt-4 dark:text-white text-lg'>
+                    <p className='mt-4 dark:text-white text-lg'>
                         <Availability available={true} />
                     </p>
                 </div>

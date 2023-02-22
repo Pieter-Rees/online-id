@@ -1,3 +1,4 @@
+import { InView } from 'react-intersection-observer'
 interface TitleProps {
     size?: string
     title?: string
@@ -26,9 +27,20 @@ function size(props: TitleProps) {
 }
 
 const Title = (props: TitleProps) => (
-    <div className={`px-16 pb-4 mx-auto text-center text-black dark:text-white ${size(props)}`}>
-        {props.title}
-    </div>
+    <InView>
+        {({ inView, ref }) => (
+            <div ref={ref}>
+                <h2></h2>
+                <div
+                    className={`transition-all duration-500 xl:px-16 pb-4 mx-auto text-center text-black dark:text-white ${
+                        inView ? 'opacity-100' : 'opacity-0'
+                    } ${size(props)}`}
+                >
+                    {props.title}
+                </div>
+            </div>
+        )}
+    </InView>
 )
 
 export default Title
