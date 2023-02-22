@@ -46,7 +46,7 @@ const Social = () => (
                         pieter@pieterrees.nl
                     </a>
                 </div>
-                <div className='mx-2 flex items-center cursor-crosshair'>
+                <div className='mx-2 flex items-center cursor-crosshair hidden lg:flex'>
                     <DarkMode />
                 </div>
             </div>
