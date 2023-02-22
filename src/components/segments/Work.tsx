@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import Renderloader from '../elements/Renderloader'
 
 const Title = lazy(async () => await import('../elements/Title'))
@@ -24,7 +24,7 @@ const Work = () => (
                     </div>
                     <div className='flex mt-8'>
                         <a
-                            className='font-bold ease-in-out duration-100 hover:text-red dark:text-white'
+                            className='cursor-crosshair font-bold ease-in-out duration-100 hover:text-red dark:text-white'
                             href={`mailto:${EmailAddress}`}
                         >
                             {EmailAddress}

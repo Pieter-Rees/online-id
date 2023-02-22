@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import Renderloader from '../elements/Renderloader'
 
 const Title = lazy(async () => await import('../elements/Title'))

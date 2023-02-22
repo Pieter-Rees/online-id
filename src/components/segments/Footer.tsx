@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import Renderloader from '../elements/Renderloader'
 import { Link } from 'react-scroll'
 
@@ -10,8 +10,7 @@ const Footer = () => (
     <Suspense fallback={Renderloader()}>
         <div className='pb-8' id='footer'>
             <p className='text-center text-sm dark:text-white'>
-                <div>Made in Amsterdam
-                </div>
+                <div>Made in Amsterdam</div>
                 <FooterDate />
             </p>
             <div className='my-4'>

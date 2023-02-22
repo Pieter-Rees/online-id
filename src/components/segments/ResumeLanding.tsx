@@ -1,55 +1,18 @@
-import React from 'react'
-import ResumeContent from './ResumeContent'
-import ResumeProps from '../../types/resume.type'
+import { Suspense, lazy } from 'react'
 
-interface State {
-    data: ResumeProps[]
-    powers: ResumeProps[]
-}
-export default class Resume extends React.Component<State> {
-    componentDidMount() {
-        this.getData()
-    }
+import Renderloader from '../elements/Renderloader'
 
-    getData() {
-        ResumeContent.getAll()
-            .then((response: any) => {
-                console.log(response.data)
+const Title = lazy(async () => await import('../elements/Title'))
 
-                this.setState({
-                    data: response.data,
-                })
-            })
-            .catch((e: Error) => {
-                console.log(e)
-            })
-    }
+const ResumeLanding = () => (
+    <Suspense fallback={Renderloader()}>
+        <div className='h-full' id='landing'>
+            <div className='h-full flex flex-col items-center justify-center'>
+                <Title size={'xxxxl'} title={'Pieter Rees'} />
+                <Title size={'xxl'} title={'I make web things, and more'} />
+            </div>
+        </div>
+    </Suspense>
+)
 
-    // render() {
-    //     return (
-    //         <div>
-    //             {this.state.data.map((piece, index) => {
-    //                 return (
-    //                     <div key={index}>
-    //                         <h1 className='text-white'>{piece.title}</h1>
-    //                         {piece.powers.map((power, index) => {
-    //                             return (
-    //                                 <div className='text-white' key={index}>
-    //                                     {power}
-    //                                 </div>
-    //                             )
-    //                         })}
-    //                     </div>
-    //                 )
-    //             })}
-    //         </div>
-    //     )
-    //     return this.state.data.map((piece) => {
-    //         return piece.powers.map((power) => (
-    //             <div>
-    //                 {power}
-    //             </div>
-    //         ));
-    //     });
-    // }
-}
+export default ResumeLanding

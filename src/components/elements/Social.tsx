@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 
 import Renderloader from '../elements/Renderloader'
 import DarkMode from './DarkMode'
@@ -14,6 +14,7 @@ const Social = () => (
                 <div className='mx-2'>
                     <a
                         aria-label='Github'
+                        className='cursor-crosshair'
                         href='https://github.com/pieter-rees'
                         rel='noopener noreferrer'
                         target='_blank'
@@ -25,6 +26,7 @@ const Social = () => (
                 <div className='mx-2'>
                     <a
                         aria-label='Linkedin'
+                        className='cursor-crosshair'
                         href='https://www.linkedin.com/in/pieter-rees-1299a52a/'
                         rel='noopener noreferrer'
                         target='_blank'
@@ -36,7 +38,7 @@ const Social = () => (
                 <div className='mx-2 flex items-center'>
                     <a
                         aria-label='Email'
-                        className='text-sm text-black dark:text-white hover:text-red font-bold'
+                        className='cursor-crosshair text-sm text-black hover:text-red dark:text-white font-bold'
                         href='mailto:pieter@pieterrees.nl'
                         rel='noopener noreferrer'
                         target='_blank'
@@ -44,7 +46,7 @@ const Social = () => (
                         pieter@pieterrees.nl
                     </a>
                 </div>
-                <div className='mx-2 flex items-center'>
+                <div className='mx-2 flex items-center cursor-crosshair'>
                     <DarkMode />
                 </div>
             </div>

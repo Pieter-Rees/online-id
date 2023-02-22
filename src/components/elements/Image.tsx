@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Pieter from '../../img/p.webp'
 
 const Image = () => (

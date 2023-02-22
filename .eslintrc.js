@@ -24,7 +24,8 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': ['off'],
         'react/jsx-sort-props': 'error',
         'import-newlines/enforce': 'error',
-        'no-debugger': 1
+        'no-debugger': 1,
+        'react/react-in-jsx-scope': 'off',
     },
     settings: {
         react: {

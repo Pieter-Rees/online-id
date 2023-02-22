@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface ContainerProps {
     fullHeight: boolean
     content: any
