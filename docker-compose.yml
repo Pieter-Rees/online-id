@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./:/online-id:delegated
-      - /node_modules
+      - /online-id/node_modules
     ports:
       - 3000:3000
     environment:
