@@ -13,7 +13,7 @@ const Footer = () => (
             <Fader
                 content={
                     <p className='text-center text-sm dark:text-white'>
-                        <div>Made in Amsterdam</div>
+                        <span>Made in Amsterdam</span>
                         <FooterDate />
                     </p>
                 }
