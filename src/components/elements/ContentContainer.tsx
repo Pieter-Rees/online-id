@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-
+import { ReactNode } from 'react'
 import Renderloader from './Renderloader'
 
 import SvgContainer from './SvgContainer'
@@ -8,7 +8,7 @@ const Title = lazy(async () => await import('./Title'))
 
 interface ContentContainerProps {
     title?: string
-    image?: JSX.Element
+    image?: ReactNode
     content: string
 }
 

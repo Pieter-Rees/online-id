@@ -17,35 +17,36 @@ const EmailAddress = 'pieter@pieterrees.nl'
 const Work = () => (
     <Suspense fallback={Renderloader()}>
         <div className='' id='work'>
-            <Fader content={<Title size={'xxl'} title={WorkContent.title} />} />
+            <Fader>
+                <Title size={'xxl'} title={WorkContent.title} />
+            </Fader>
 
-            <Fader
-                content={
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-48 mx-auto'>
-                        <div className='flex flex-col self-center justify-center'>
-                            <div className='flex flex-col items-center'>
-                                <ContentContainer content={WorkContent.content} />
-                            </div>
-                            <div className='flex mt-8'>
-                                <a
-                                    className='cursor-crosshair font-bold ease-in-out duration-100 hover:text-red dark:text-white'
-                                    href={`mailto:${EmailAddress}`}
-                                >
-                                    {EmailAddress}
-                                </a>
-                            </div>
+            <Fader>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-48 mx-auto'>
+                    <div className='flex flex-col self-center justify-center'>
+                        <div className='flex flex-col items-center'>
+                            <ContentContainer content={WorkContent.content} />
                         </div>
-                        <div className='flex flex-col justify-center'>
-                            <p className='dark:text-white text-lg'>
-                                Availability for freelance work:
-                            </p>
-                            <p className='mt-4 dark:text-white text-lg'>
-                                <Availability available={true} />
-                            </p>
+                        <div className='flex mt-8'>
+                            <a
+                                className='cursor-crosshair font-bold ease-in-out duration-100 hover:text-red dark:text-white'
+                                href={`mailto:${EmailAddress}`}
+                            >
+                                {EmailAddress}
+                            </a>
                         </div>
                     </div>
-                }
-            />
+                    <div className='flex flex-col justify-center'>
+                        <p className='dark:text-white text-lg'>
+                            Availability for freelance work:
+                        </p>
+                        <p className='mt-4 dark:text-white text-lg'>
+                            <Availability available={true} />
+                        </p>
+                    </div>
+                </div>
+            </Fader>
+
         </div>
     </Suspense>
 )

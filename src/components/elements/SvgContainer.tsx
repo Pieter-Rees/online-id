@@ -1,8 +1,9 @@
+import { ReactNode } from "react"
 interface SvgContainerProps {
     size?: string
     inline?: boolean
     color?: string
-    svg?: JSX.Element
+    svg?: ReactNode
 }
 
 function size(props: SvgContainerProps) {
@@ -22,9 +23,8 @@ function size(props: SvgContainerProps) {
 
 const SvgContainer = (props: SvgContainerProps) => (
     <div
-        className={`mx-auto ease-in-out ${
-            props.inline ? 'inline-flex mx-1' : ''
-        } duration-100 ${size(props)}`}
+        className={`mx-auto ease-in-out ${props.inline ? 'inline-flex mx-1' : ''
+            } duration-100 ${size(props)}`}
     >
         {props.svg}
     </div>

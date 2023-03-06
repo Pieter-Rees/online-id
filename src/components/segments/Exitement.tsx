@@ -36,46 +36,40 @@ const At = {
 const Exitement = () => (
     <Suspense fallback={Renderloader()}>
         <div id='exitement'>
-            <Fader content={<Title size={'xxl'} title={ExitementTitle} />} />
+            <Fader>
+                <Title size={'xxl'} title={ExitementTitle} />
+            </Fader>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
-                <Fader
-                    content={
-                        <ContentContainer
-                            content={Iot.content}
-                            image={<IotLogo />}
-                            title={Iot.title}
-                        />
-                    }
-                />
+                <Fader>
+                    <ContentContainer
+                        content={Iot.content}
+                        image={<IotLogo />}
+                        title={Iot.title}
+                    />
+                </Fader>
 
-                <Fader
-                    content={
-                        <ContentContainer
-                            content={Rc.content}
-                            image={<RcLogo />}
-                            title={Rc.title}
-                        />
-                    }
-                />
-                <Fader
-                    content={
-                        <ContentContainer
-                            content={Linux.content}
-                            image={<LinuxLogo />}
-                            title={Linux.title}
-                        />
-                    }
-                />
-                <Fader
-                    content={
-                        <ContentContainer
-                            content={At.content}
-                            image={<TechLogo />}
-                            title={At.title}
-                        />
-                    }
-                />
+                <Fader>
+                    <ContentContainer
+                        content={Rc.content}
+                        image={<RcLogo />}
+                        title={Rc.title}
+                    />
+                </Fader>
+                <Fader>
+                    <ContentContainer
+                        content={Linux.content}
+                        image={<LinuxLogo />}
+                        title={Linux.title}
+                    />
+                </Fader>
+                <Fader>
+                    <ContentContainer
+                        content={At.content}
+                        image={<TechLogo />}
+                        title={At.title}
+                    />
+                </Fader>
             </div>
         </div>
     </Suspense>

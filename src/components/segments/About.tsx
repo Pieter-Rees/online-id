@@ -13,11 +13,15 @@ const AboutContent = {
 const About = () => (
     <Suspense fallback={Renderloader()}>
         <div id='about'>
-            <Fader content={<Title size={'xxl'} title={AboutContent.title} />} />
+            <Fader>
+                <Title size={'xxl'} title={AboutContent.title} />
+            </Fader>
 
             <div className='grid grid-cols-1 gap-24 mx-auto mt-8'>
                 <div className='flex items-center'>
-                    <Fader content={<ContentContainer content={AboutContent.content} />} />
+                    <Fader>
+                        <ContentContainer content={AboutContent.content} />
+                    </Fader>
                 </div>
             </div>
         </div>
