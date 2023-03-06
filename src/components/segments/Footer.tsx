@@ -12,7 +12,7 @@ const Footer = () => (
         <div className='pb-8' id='footer'>
             <Fader>
                 <p className='text-center text-sm dark:text-white'>
-                    <div>Made in Amsterdam</div>
+                    <span className='block'>Made in Amsterdam</span>
                     <FooterDate />
                 </p>
             </Fader>
