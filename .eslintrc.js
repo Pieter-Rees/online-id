@@ -21,7 +21,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'react-hooks', 'import-newlines', 'prettier'],
     rules: {
-        '@typescript-eslint/no-explicit-any': ['on'],
+        '@typescript-eslint/no-explicit-any': 2,
         'react/jsx-sort-props': 'error',
         'import-newlines/enforce': 'error',
         'no-debugger': 1,

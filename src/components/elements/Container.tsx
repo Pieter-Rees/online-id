@@ -1,6 +1,8 @@
+import { ReactNode } from "react"
+
 interface ContainerProps {
     fullHeight: boolean
-    content: any
+    content: ReactNode
 }
 
 const Container = (props: ContainerProps) => (
