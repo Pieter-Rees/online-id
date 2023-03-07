@@ -1,10 +1,11 @@
 import { Suspense, lazy } from 'react'
 import '../../App.css'
 import Renderloader from '../elements/Renderloader'
-
+import Container from '../elements/Container'
+import ResumeLanding from '../segments/ResumeLanding'
 // const Container = lazy(async () => await import('../elements/Container'))
 // const ResumeLanding = lazy(async () => await import('../segments/ResumeLanding'))
-// const ResumeContent = lazy(() => import('../segments/ResumeContent'))
+import ResumeContent from '../segments/ResumeContent'
 const Social = lazy(async () => await import('../elements/Social'))
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         <div className='dark:bg-black'>
             <Suspense fallback={Renderloader()}>
                 <Social />
-                {/* <Container content={<ResumeLanding />} fullHeight={true} /> */}
+                <Container content={<ResumeLanding />} fullHeight={true} />
+                <Container content={<ResumeContent />} fullHeight={true} />
             </Suspense>
         </div>
     )

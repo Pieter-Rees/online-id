@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react'
 
 import Renderloader from '../elements/Renderloader'
-
+import { Link } from 'react-router-dom'
 const Fader = lazy(async () => await import('../elements/Fader'))
 
 const Title = lazy(async () => await import('../elements/Title'))
@@ -13,6 +13,7 @@ const Landing = () => (
                 <Fader>
                     <Title size={'xxxxl'} title={'Pieter Rees'} />
                 </Fader>
+                <Link to="/resume">TEST</Link>
                 <Fader>
                     <Title size={'xxl'} title={'I make web things, and more'} />
                 </Fader>

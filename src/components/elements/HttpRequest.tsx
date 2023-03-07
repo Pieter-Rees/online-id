@@ -5,9 +5,9 @@ export default axios.create({
     // headers: {
     //     "Content-type": "application/json"
     // },
-    auth: {
-        username: 'ben',
-        password: 'my-favorite-password',
-    },
+    // auth: {
+    //     username: 'ben',
+    //     password: 'my-favorite-password',
+    // },
     method: 'get',
 })

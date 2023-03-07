@@ -14,7 +14,7 @@ function App() {
     return (
         <Routes>
             <Route element={<Home />} path='/' />
-            <Route element={<Resume />} path='/' />
+            <Route element={<Resume />} path='/resume' />
         </Routes>
     )
 }

@@ -8,8 +8,7 @@ const ResumeLanding = () => (
     <Suspense fallback={Renderloader()}>
         <div className='h-full' id='landing'>
             <div className='h-full flex flex-col items-center justify-center'>
-                <Title size={'xxxxl'} title={'Pieter Rees'} />
-                <Title size={'xxl'} title={'I make web things, and more'} />
+                <Title size={'xxxxl'} title={'Resume'} />
             </div>
         </div>
     </Suspense>

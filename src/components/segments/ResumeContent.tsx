@@ -1,10 +1,21 @@
-import http from '../elements/HttpRequest'
-import ResumeProps from '../../types/resume.type'
+import { useState, useEffect } from 'react';
 
-class ResumeDataService {
-    async getAll() {
-        return await http.get<ResumeProps[]>('resume')
-    }
+function ResumeContent() {
+
+    const [data, setData] = useState();
+
+    useEffect(() => {
+        fetch('https://pietserver.nl:5050/resume/')
+            .then(response => response.json())
+            .then(data => setData(data));
+        console.log(data)
+    }, [])
+
+    return (
+        <div>
+            {data}
+        </div>
+    )
 }
 
-export default new ResumeDataService()
+export default ResumeContent
