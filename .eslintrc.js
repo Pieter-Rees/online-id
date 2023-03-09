@@ -26,6 +26,7 @@ module.exports = {
         'import-newlines/enforce': 'error',
         'no-debugger': 1,
         'react/react-in-jsx-scope': 'off',
+        'react/prop-types': 'off',
     },
     settings: {
         react: {

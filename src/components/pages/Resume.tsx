@@ -6,8 +6,9 @@ const ResumeLanding = lazy(async () => await import('../segments/ResumeLanding')
 const ResumeContent = lazy(async () => await import('../segments/ResumeContent'))
 const Social = lazy(async () => await import('../elements/Social'))
 const Footer = lazy(async () => await import('../segments/Footer'))
-import { useState } from 'react'
+const Wall = lazy(async () => await import('../elements/Wall'))
 
+import { useState } from 'react'
 function Resume() {
     const [isLoggedIn, setisLoggedIn] = useState(false)
 
@@ -17,6 +18,15 @@ function Resume() {
     const logOut = () => {
         setisLoggedIn(false)
     }
+
+    const handleParentFun = (value) => {
+        console.log('Call to Parent Component!', value)
+    }
+
+    const changeName = () => {
+        setisLoggedIn(true)
+    }
+
     return (
         <div className='dark:bg-black'>
             <Suspense fallback={Renderloader()}>
@@ -26,6 +36,8 @@ function Resume() {
                 ) : (
                     <button onClick={logIn}>Login</button>
                 )}
+                <Wall changeName={changeName} />
+
                 <Container content={<ResumeLanding />} fullHeight={true} />
                 <Container
                     content={<ResumeContent isLoggedIn={isLoggedIn} />}
