@@ -10,6 +10,7 @@ import { useState } from 'react'
 
 function Resume() {
     const [isLoggedIn, setisLoggedIn] = useState(false)
+
     const logIn = () => {
         setisLoggedIn(true)
     }

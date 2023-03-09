@@ -12,10 +12,12 @@ ReactGA.pageview(window.location.pathname + window.location.search)
 
 function App() {
     return (
-        <Routes>
-            <Route element={<Home />} path='/' />
-            <Route element={<Resume />} path='/resume' />
-        </Routes>
+        <>
+            <Routes>
+                <Route element={<Home />} path='/' />
+                <Route element={<Resume />} path='/resume' />
+            </Routes>
+        </>
     )
 }
 

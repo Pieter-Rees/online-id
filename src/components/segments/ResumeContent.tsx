@@ -13,10 +13,28 @@ function ResumeContent() {
     const [data, setData] = useState<DataInterface[]>([])
 
     useEffect(() => {
-        fetch('http://localhost:5050/test/')
+        const options = {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json;charset=UTF-8',
+            },
+            body: JSON.stringify({
+                username: 'test',
+                password: 'kaas',
+            }),
+        }
+
+        fetch('http://localhost:5050/resume', options)
             .then((response) => response.json())
             .then((data) => setData(data))
     }, [])
+
+    useEffect(() => {
+        if (data.length > 0) {
+            console.log(data)
+        }
+    }, [data])
 
     return (
         <div className='h-full' id='landing'>
