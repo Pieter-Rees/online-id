@@ -27,7 +27,10 @@ function Resume() {
                     <button onClick={logIn}>Login</button>
                 )}
                 <Container content={<ResumeLanding />} fullHeight={true} />
-                {isLoggedIn ? <Container content={<ResumeContent />} fullHeight={true} /> : null}
+                <Container
+                    content={<ResumeContent isLoggedIn={isLoggedIn} />}
+                    fullHeight={isLoggedIn}
+                />
                 <Footer />
             </Suspense>
         </div>
