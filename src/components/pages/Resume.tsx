@@ -10,40 +10,37 @@ const Wall = lazy(async () => await import('../elements/Wall'))
 
 import { useState } from 'react'
 function Resume() {
-    const [isLoggedIn, setisLoggedIn] = useState(false)
+    const [state, setState] = useState(false)
+    const [password, setPassword] = useState('')
+
+    debugger
 
     const logIn = () => {
-        setisLoggedIn(true)
+        setState(true)
     }
     const logOut = () => {
-        setisLoggedIn(false)
-    }
-
-    const handleParentFun = (value) => {
-        console.log('Call to Parent Component!', value)
-    }
-
-    const changeName = () => {
-        setisLoggedIn(true)
+        setState(false)
     }
 
     return (
         <div className='dark:bg-black'>
             <Suspense fallback={Renderloader()}>
-                <Social />
-                {isLoggedIn ? (
+                {!state ? <Wall setPassword={setPassword} stateChanger={setState} /> : null}
+                {password}
+                {state ? <>
+                    <Social />
                     <button onClick={logOut}>Logout</button>
-                ) : (
-                    <button onClick={logIn}>Login</button>
-                )}
-                <Wall changeName={changeName} />
 
-                <Container content={<ResumeLanding />} fullHeight={true} />
-                <Container
-                    content={<ResumeContent isLoggedIn={isLoggedIn} />}
-                    fullHeight={isLoggedIn}
-                />
-                <Footer />
+                    <Container content={<ResumeLanding />} fullHeight={true} />
+                    {state ? (
+                        <Container
+                            content={<ResumeContent isLoggedIn={state} />}
+                            fullHeight={true}
+                        />
+                    ) : null}
+
+                    <Footer />
+                </> : null}
             </Suspense>
         </div>
     )
