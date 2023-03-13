@@ -1,4 +1,7 @@
-function Wall({ stateChanger, setPassword, ...rest }) {
+import { useState } from 'react';
+
+function Wall({ stateChanger, setPassword }) {
+    const [localPassword, setLocalPassword] = useState('');
 
     return (
         <div className="h-full w-full fixed flex justify-center items-center">
@@ -8,15 +11,16 @@ function Wall({ stateChanger, setPassword, ...rest }) {
                     <input
                         className='shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='password'
+                        onChange={e => setLocalPassword(e.target.value)}
                         placeholder='******************'
                         type='password'
-                        value="Submit"
+                        value={localPassword}
                     />
                 </div>
                 <div className='flex items-center justify-center'>
                     <button
                         className='bg-red hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                        onClick={() => { stateChanger(true); setPassword('test') }}
+                        onClick={() => { stateChanger(true); setPassword(localPassword) }}
                         type='button'
                     >
                         Sign In

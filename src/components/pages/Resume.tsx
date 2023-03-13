@@ -13,11 +13,6 @@ function Resume() {
     const [state, setState] = useState(false)
     const [password, setPassword] = useState('')
 
-    debugger
-
-    const logIn = () => {
-        setState(true)
-    }
     const logOut = () => {
         setState(false)
     }
@@ -26,7 +21,6 @@ function Resume() {
         <div className='dark:bg-black'>
             <Suspense fallback={Renderloader()}>
                 {!state ? <Wall setPassword={setPassword} stateChanger={setState} /> : null}
-                {password}
                 {state ? <>
                     <Social />
                     <button onClick={logOut}>Logout</button>
@@ -34,7 +28,7 @@ function Resume() {
                     <Container content={<ResumeLanding />} fullHeight={true} />
                     {state ? (
                         <Container
-                            content={<ResumeContent isLoggedIn={state} />}
+                            content={<ResumeContent isLoggedIn={state} password={password} />}
                             fullHeight={true}
                         />
                     ) : null}

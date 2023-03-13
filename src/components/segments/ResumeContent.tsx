@@ -5,6 +5,7 @@ interface Powers {
 }
 interface DataInterface {
     isLoggedIn: boolean
+    password: string
     title?: string
     subTitle?: string
     powers?: Powers[]
@@ -21,8 +22,7 @@ function ResumeContent(props: DataInterface) {
                 'Content-Type': 'application/json;charset=UTF-8',
             },
             body: JSON.stringify({
-                username: 'test',
-                password: 'kaas',
+                password: props.password
             }),
         }
 
@@ -34,6 +34,7 @@ function ResumeContent(props: DataInterface) {
     useEffect(() => {
         if (data.length > 0) {
             console.log(data)
+
         }
     }, [data])
 
