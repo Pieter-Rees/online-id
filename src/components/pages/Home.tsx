@@ -1,18 +1,18 @@
-import { Suspense, lazy } from 'react'
-import '../../App.css'
+import { Suspense, lazy } from 'react';
+import '../../App.css';
 
-import Renderloader from '../elements/Renderloader'
+import Renderloader from '../elements/Renderloader';
 
-const About = lazy(async () => await import('../segments/About'))
-const Landing = lazy(async () => await import('../segments/Landing'))
-const Skills = lazy(async () => await import('../segments/Skills'))
-const Exitement = lazy(async () => await import('../segments/Exitement'))
-const Work = lazy(async () => await import('../segments/Work'))
-const Footer = lazy(async () => await import('../segments/Footer'))
-const Social = lazy(async () => await import('../elements/Social'))
-const Navigation = lazy(async () => await import('../elements/Navigation'))
-const Hr = lazy(async () => await import('../elements/Hr'))
-const Container = lazy(async () => await import('../elements/Container'))
+const About = lazy(async () => await import('../segments/About'));
+const Landing = lazy(async () => await import('../segments/Landing'));
+const Skills = lazy(async () => await import('../segments/Skills'));
+const Exitement = lazy(async () => await import('../segments/Exitement'));
+const Work = lazy(async () => await import('../segments/Work'));
+const Footer = lazy(async () => await import('../segments/Footer'));
+const Social = lazy(async () => await import('../elements/Social'));
+const Navigation = lazy(async () => await import('../elements/Navigation'));
+const Hr = lazy(async () => await import('../elements/Hr'));
+const Container = lazy(async () => await import('../elements/Container'));
 
 function App() {
     return (
@@ -32,7 +32,7 @@ function App() {
                 <Footer />
             </Suspense>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;

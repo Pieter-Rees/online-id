@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export default axios.create({
     baseURL: 'http://localhost:5050/',
@@ -9,5 +9,5 @@ export default axios.create({
     //     username: 'ben',
     //     password: 'my-favorite-password',
     // },
-    method: 'get',
-})
+    method: 'get'
+});

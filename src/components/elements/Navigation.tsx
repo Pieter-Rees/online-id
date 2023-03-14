@@ -1,7 +1,7 @@
-import { Suspense } from 'react'
+import { Suspense } from 'react';
 
-import Renderloader from '../elements/Renderloader'
-import { Link } from 'react-scroll'
+import Renderloader from '../elements/Renderloader';
+import { Link } from 'react-scroll';
 
 const Navigation = () => (
     <Suspense fallback={Renderloader()}>
@@ -66,6 +66,6 @@ const Navigation = () => (
             </div>
         </div>
     </Suspense>
-)
+);
 
-export default Navigation
+export default Navigation;

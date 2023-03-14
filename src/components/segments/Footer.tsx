@@ -1,11 +1,11 @@
-import { Suspense, lazy } from 'react'
-import Renderloader from '../elements/Renderloader'
-import { Link } from 'react-scroll'
-const Fader = lazy(async () => await import('../elements/Fader'))
+import { Suspense, lazy } from 'react';
+import Renderloader from '../elements/Renderloader';
+import { Link } from 'react-scroll';
+const Fader = lazy(async () => await import('../elements/Fader'));
 
-const SvgContainer = lazy(async () => await import('../elements/SvgContainer'))
-const Tag = lazy(async () => await import('../svg/Tag'))
-const FooterDate = lazy(async () => await import('../elements/FooterDate'))
+const SvgContainer = lazy(async () => await import('../elements/SvgContainer'));
+const Tag = lazy(async () => await import('../svg/Tag'));
+const FooterDate = lazy(async () => await import('../elements/FooterDate'));
 
 const Footer = () => (
     <Suspense fallback={Renderloader()}>
@@ -34,6 +34,6 @@ const Footer = () => (
             </Fader>
         </div>
     </Suspense>
-)
+);
 
-export default Footer
+export default Footer;

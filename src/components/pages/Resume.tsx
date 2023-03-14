@@ -1,43 +1,124 @@
-import { Suspense, lazy } from 'react'
-import '../../App.css'
-import Renderloader from '../elements/Renderloader'
-const Container = lazy(async () => await import('../elements/Container'))
-const ResumeLanding = lazy(async () => await import('../segments/ResumeLanding'))
-const ResumeContent = lazy(async () => await import('../segments/ResumeContent'))
-const Social = lazy(async () => await import('../elements/Social'))
-const Footer = lazy(async () => await import('../segments/Footer'))
-const Wall = lazy(async () => await import('../elements/Wall'))
+import { Suspense, lazy } from 'react';
+import '../../App.css';
+import Renderloader from '../elements/Renderloader';
+const Container = lazy(async () => await import('../elements/Container'));
+const ResumeLanding = lazy(
+    async () => await import('../segments/ResumeLanding')
+);
+const Social = lazy(async () => await import('../elements/Social'));
+const Footer = lazy(async () => await import('../segments/Footer'));
+const Wall = lazy(async () => await import('../elements/Wall'));
+import { useState } from 'react';
+const SvgContainer = lazy(async () => await import('../elements/SvgContainer'));
+const Tag = lazy(async () => await import('../svg/Tag'));
+import { Link } from 'react-router-dom';
 
-import { useState } from 'react'
+interface Powers {
+    name: string;
+}
+interface DataInterface {
+    isLoggedIn?: boolean;
+    password?: string;
+    title?: string;
+    subTitle?: string;
+    powers?: Powers[];
+}
+
 function Resume() {
-    const [state, setState] = useState(false)
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('');
+    const [data, setData] = useState<DataInterface[]>([]);
+    const fetchData = () => {
+        setTimeout(() => {
+            const options = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json;charset=UTF-8'
+                },
+                body: JSON.stringify({
+                    password: password
+                })
+            };
 
-    const logOut = () => {
-        setState(false)
-    }
+            fetch('http://localhost:5050/resume', options)
+                .then((response) => response.json())
+                .then((data) => setData(data));
+        }, 1000);
+    };
 
     return (
         <div className='dark:bg-black'>
             <Suspense fallback={Renderloader()}>
-                {!state ? <Wall setPassword={setPassword} stateChanger={setState} /> : null}
-                {state ? <>
-                    <Social />
-                    <button onClick={logOut}>Logout</button>
+                {data.length > 0 ? null : (
+                    <Wall fetchData={fetchData} setPassword={setPassword} />
+                )}
+                {data.length > 0 ? (
+                    <>
+                        <Social />
 
-                    <Container content={<ResumeLanding />} fullHeight={true} />
-                    {state ? (
                         <Container
-                            content={<ResumeContent isLoggedIn={state} password={password} />}
+                            content={<ResumeLanding />}
                             fullHeight={true}
                         />
-                    ) : null}
-
-                    <Footer />
-                </> : null}
+                        {data.length > 1 ? (
+                            <Container
+                                content={
+                                    <>
+                                        {data && (
+                                            <ul className='flex justify-center flex-wrap items-stretch'>
+                                                {data.map((data, index) => (
+                                                    <li
+                                                        className='w-96 m-8'
+                                                        key={index}
+                                                    >
+                                                        <h3 className='text-xl'>
+                                                            {data.title}
+                                                        </h3>
+                                                        {data.subTitle && (
+                                                            <h4 className='text-lg'>
+                                                                {data.subTitle}
+                                                            </h4>
+                                                        )}
+                                                        <ul>
+                                                            {data.powers &&
+                                                                data.powers.map(
+                                                                    (
+                                                                        powers,
+                                                                        index
+                                                                    ) => (
+                                                                        <li
+                                                                            className='text-base'
+                                                                            key={
+                                                                                index
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                powers.name
+                                                                            }
+                                                                        </li>
+                                                                    )
+                                                                )}
+                                                        </ul>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </>
+                                }
+                                fullHeight={true}
+                            />
+                        ) : null}
+                        <Footer />
+                    </>
+                ) : null}
+                <div className='absolute left-4 top-4 z-1000'>
+                    <Link to='/'>
+                        <SvgContainer color='grey' size='small' svg={<Tag />} />
+                    </Link>
+                </div>
             </Suspense>
         </div>
-    )
+    );
 }
 
-export default Resume
+export default Resume;

@@ -1,8 +1,8 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react';
 
-import Renderloader from '../elements/Renderloader'
+import Renderloader from '../elements/Renderloader';
 
-const Title = lazy(async () => await import('../elements/Title'))
+const Title = lazy(async () => await import('../elements/Title'));
 
 const ResumeLanding = () => (
     <Suspense fallback={Renderloader()}>
@@ -12,6 +12,6 @@ const ResumeLanding = () => (
             </div>
         </div>
     </Suspense>
-)
+);
 
-export default ResumeLanding
+export default ResumeLanding;

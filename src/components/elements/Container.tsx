@@ -1,8 +1,8 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react';
 
 interface ContainerProps {
-    fullHeight: boolean
-    content: ReactNode
+    fullHeight: boolean;
+    content: ReactNode;
 }
 
 const Container = (props: ContainerProps) => (
@@ -12,6 +12,6 @@ const Container = (props: ContainerProps) => (
     >
         {props.content}
     </section>
-)
+);
 
-export default Container
+export default Container;

@@ -1,15 +1,15 @@
-import { Suspense, lazy } from 'react'
-import { ReactNode } from 'react'
-import Renderloader from './Renderloader'
+import { Suspense, lazy } from 'react';
+import { ReactNode } from 'react';
+import Renderloader from './Renderloader';
 
-import SvgContainer from './SvgContainer'
-import Paragraph from './Paragraph'
-const Title = lazy(async () => await import('./Title'))
+import SvgContainer from './SvgContainer';
+import Paragraph from './Paragraph';
+const Title = lazy(async () => await import('./Title'));
 
 interface ContentContainerProps {
-    title?: string
-    image?: ReactNode
-    content: string
+    title?: string;
+    image?: ReactNode;
+    content: string;
 }
 
 const ContentContainer = (props: ContentContainerProps) => (
@@ -26,6 +26,6 @@ const ContentContainer = (props: ContentContainerProps) => (
             <Paragraph content={props.content}></Paragraph>
         </div>
     </Suspense>
-)
+);
 
-export default ContentContainer
+export default ContentContainer;

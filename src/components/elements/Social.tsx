@@ -1,11 +1,11 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react';
 
-import Renderloader from '../elements/Renderloader'
-import DarkMode from './DarkMode'
+import Renderloader from '../elements/Renderloader';
+import DarkMode from './DarkMode';
 
-const SvgContainer = lazy(async () => await import('./SvgContainer'))
-const Linkedin = lazy(async () => await import('../svg/Linkedin'))
-const Github = lazy(async () => await import('../svg/Github'))
+const SvgContainer = lazy(async () => await import('./SvgContainer'));
+const Linkedin = lazy(async () => await import('../svg/Linkedin'));
+const Github = lazy(async () => await import('../svg/Github'));
 
 const Social = () => (
     <Suspense fallback={Renderloader()}>
@@ -52,6 +52,6 @@ const Social = () => (
             </div>
         </div>
     </Suspense>
-)
+);
 
-export default Social
+export default Social;

@@ -1,14 +1,14 @@
-import './App.css'
+import './App.css';
 
-import React from 'react'
-import ReactGA from 'react-ga'
-import { Route, Routes } from 'react-router-dom'
+import React from 'react';
+import ReactGA from 'react-ga';
+import { Route, Routes } from 'react-router-dom';
 
-import Home from './components/pages/Home'
-import Resume from './components/pages/Resume'
+import Home from './components/pages/Home';
+import Resume from './components/pages/Resume';
 
-ReactGA.initialize('UA-156298268-1')
-ReactGA.pageview(window.location.pathname + window.location.search)
+ReactGA.initialize('UA-156298268-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
                 <Route element={<Resume />} path='/resume' />
             </Routes>
         </>
-    )
+    );
 }
 
-export default App
+export default App;

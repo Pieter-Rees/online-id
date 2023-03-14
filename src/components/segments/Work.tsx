@@ -1,18 +1,20 @@
-import { Suspense, lazy } from 'react'
-import Renderloader from '../elements/Renderloader'
-const Fader = lazy(async () => await import('../elements/Fader'))
+import { Suspense, lazy } from 'react';
+import Renderloader from '../elements/Renderloader';
+const Fader = lazy(async () => await import('../elements/Fader'));
 
-const Title = lazy(async () => await import('../elements/Title'))
-const Availability = lazy(async () => await import('../elements/Availability'))
-const ContentContainer = lazy(async () => await import('../elements/ContentContainer'))
+const Title = lazy(async () => await import('../elements/Title'));
+const Availability = lazy(async () => await import('../elements/Availability'));
+const ContentContainer = lazy(
+    async () => await import('../elements/ContentContainer')
+);
 
 const WorkContent = {
     title: 'Work',
     content:
-        'Currently I am working @ GoodUp. We provide The #1 tech solution for activating employees on your company purpose. I am always up for a nice talk about innovative ideas.',
-}
+        'Currently I am working @ GoodUp. We provide The #1 tech solution for activating employees on your company purpose. I am always up for a nice talk about innovative ideas.'
+};
 
-const EmailAddress = 'pieter@pieterrees.nl'
+const EmailAddress = 'pieter@pieterrees.nl';
 
 const Work = () => (
     <Suspense fallback={Renderloader()}>
@@ -46,9 +48,8 @@ const Work = () => (
                     </div>
                 </div>
             </Fader>
-
         </div>
     </Suspense>
-)
+);
 
-export default Work
+export default Work;

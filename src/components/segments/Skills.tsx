@@ -1,9 +1,11 @@
-import { Suspense, lazy } from 'react'
-import Renderloader from '../elements/Renderloader'
+import { Suspense, lazy } from 'react';
+import Renderloader from '../elements/Renderloader';
 
-const Title = lazy(async () => await import('../elements/Title'))
-const ContentContainer = lazy(async () => await import('../elements/ContentContainer'))
-const Fader = lazy(async () => await import('../elements/Fader'))
+const Title = lazy(async () => await import('../elements/Title'));
+const ContentContainer = lazy(
+    async () => await import('../elements/ContentContainer')
+);
+const Fader = lazy(async () => await import('../elements/Fader'));
 
 const Skills = () => (
     <Suspense fallback={Renderloader()}>
@@ -74,6 +76,6 @@ const Skills = () => (
             </div>
         </div>
     </Suspense>
-)
+);
 
-export default Skills
+export default Skills;
