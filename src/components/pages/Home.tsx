@@ -1,14 +1,14 @@
 import '../../App.css';
 
-import Container from '../elements/Container';
-import Hr from '../elements/Hr';
-import Navigation from '../elements/Navigation';
-import Social from '../elements/Social';
 import About from '../segments/About';
+import Container from '../elements/Container';
 import Exitement from '../segments/Exitement';
 import Footer from '../segments/Footer';
+import Hr from '../elements/Hr';
 import Landing from '../segments/Landing';
+import Navigation from '../elements/Navigation';
 import Skills from '../segments/Skills';
+import Social from '../elements/Social';
 import Work from '../segments/Work';
 
 function App() {

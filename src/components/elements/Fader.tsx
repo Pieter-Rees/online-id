@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { InView } from 'react-intersection-observer';
+import { ReactNode } from 'react';
 interface FaderProps {
     children: ReactNode;
 }

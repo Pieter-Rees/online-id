@@ -1,10 +1,10 @@
 import ContentContainer from '../elements/ContentContainer';
 import Fader from '../elements/Fader';
-import Title from '../elements/Title';
 import IotLogo from '../svg/Iot';
 import LinuxLogo from '../svg/Linux';
 import RcLogo from '../svg/Rc';
 import TechLogo from '../svg/Tech';
+import Title from '../elements/Title';
 
 const ExitementTitle = 'Exitement';
 

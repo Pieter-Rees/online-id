@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import Fader from '../elements/Fader';
 import SvgContainer from '../elements/SvgContainer';
-import Title from '../elements/Title';
 import Tag from '../svg/Tag';
+import Title from '../elements/Title';
 
 const Landing = () => (
     <>
