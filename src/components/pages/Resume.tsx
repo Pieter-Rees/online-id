@@ -1,17 +1,13 @@
-import { Suspense, lazy } from 'react';
-import '../../App.css';
-import Renderloader from '../elements/Renderloader';
-const Container = lazy(async () => await import('../elements/Container'));
-const ResumeLanding = lazy(
-    async () => await import('../segments/ResumeLanding')
-);
-const Social = lazy(async () => await import('../elements/Social'));
-const Footer = lazy(async () => await import('../segments/Footer'));
-const Wall = lazy(async () => await import('../elements/Wall'));
 import { useState } from 'react';
-const SvgContainer = lazy(async () => await import('../elements/SvgContainer'));
-const Tag = lazy(async () => await import('../svg/Tag'));
 import { Link } from 'react-router-dom';
+import '../../App.css';
+import Container from '../elements/Container';
+import Social from '../elements/Social';
+import SvgContainer from '../elements/SvgContainer';
+import Wall from '../elements/Wall';
+import Footer from '../segments/Footer';
+import ResumeLanding from '../segments/ResumeLanding';
+import Tag from '../svg/Tag';
 
 interface Powers {
     name: string;
@@ -48,75 +44,70 @@ function Resume() {
 
     return (
         <div className='dark:bg-black'>
-            <Suspense fallback={Renderloader()}>
-                {data.length > 0 ? null : (
-                    <Wall fetchData={fetchData} setPassword={setPassword} />
-                )}
-                {data.length > 0 ? (
-                    <>
-                        <Social />
+            {data.length > 0 ? null : (
+                <Wall fetchData={fetchData} setPassword={setPassword} />
+            )}
+            {data.length > 0 ? (
+                <>
+                    <Social />
 
+                    <Container content={<ResumeLanding />} fullHeight={true} />
+                    {data.length > 1 ? (
                         <Container
-                            content={<ResumeLanding />}
+                            content={
+                                <>
+                                    {data && (
+                                        <ul className='flex justify-center flex-wrap items-stretch'>
+                                            {data.map((data, index) => (
+                                                <li
+                                                    className='w-96 m-8'
+                                                    key={index}
+                                                >
+                                                    <h3 className='text-xl'>
+                                                        {data.title}
+                                                    </h3>
+                                                    {data.subTitle && (
+                                                        <h4 className='text-lg'>
+                                                            {data.subTitle}
+                                                        </h4>
+                                                    )}
+                                                    <ul>
+                                                        {data.powers &&
+                                                            data.powers.map(
+                                                                (
+                                                                    powers,
+                                                                    index
+                                                                ) => (
+                                                                    <li
+                                                                        className='text-base'
+                                                                        key={
+                                                                            index
+                                                                        }
+                                                                    >
+                                                                        {
+                                                                            powers.name
+                                                                        }
+                                                                    </li>
+                                                                )
+                                                            )}
+                                                    </ul>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </>
+                            }
                             fullHeight={true}
                         />
-                        {data.length > 1 ? (
-                            <Container
-                                content={
-                                    <>
-                                        {data && (
-                                            <ul className='flex justify-center flex-wrap items-stretch'>
-                                                {data.map((data, index) => (
-                                                    <li
-                                                        className='w-96 m-8'
-                                                        key={index}
-                                                    >
-                                                        <h3 className='text-xl'>
-                                                            {data.title}
-                                                        </h3>
-                                                        {data.subTitle && (
-                                                            <h4 className='text-lg'>
-                                                                {data.subTitle}
-                                                            </h4>
-                                                        )}
-                                                        <ul>
-                                                            {data.powers &&
-                                                                data.powers.map(
-                                                                    (
-                                                                        powers,
-                                                                        index
-                                                                    ) => (
-                                                                        <li
-                                                                            className='text-base'
-                                                                            key={
-                                                                                index
-                                                                            }
-                                                                        >
-                                                                            {
-                                                                                powers.name
-                                                                            }
-                                                                        </li>
-                                                                    )
-                                                                )}
-                                                        </ul>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </>
-                                }
-                                fullHeight={true}
-                            />
-                        ) : null}
-                        <Footer />
-                    </>
-                ) : null}
-                <div className='absolute left-4 top-4 z-1000'>
-                    <Link to='/'>
-                        <SvgContainer color='grey' size='small' svg={<Tag />} />
-                    </Link>
-                </div>
-            </Suspense>
+                    ) : null}
+                    <Footer />
+                </>
+            ) : null}
+            <div className='absolute left-4 top-4 z-1000'>
+                <Link to='/'>
+                    <SvgContainer color='grey' size='small' svg={<Tag />} />
+                </Link>
+            </div>
         </div>
     );
 }

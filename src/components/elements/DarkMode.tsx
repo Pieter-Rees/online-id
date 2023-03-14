@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import SvgContainer from './SvgContainer';
+import { useEffect, useState } from 'react';
 import Moon from './../svg/Moon';
 import Sun from './../svg/Sun';
+import SvgContainer from './SvgContainer';
 
 function DarkMode() {
     const [theme, setTheme] = useState('light');

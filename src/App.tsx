@@ -1,9 +1,7 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
-import React from 'react';
 import ReactGA from 'react-ga';
-import { Route, Routes } from 'react-router-dom';
-
 import Home from './components/pages/Home';
 import Resume from './components/pages/Resume';
 

@@ -1,36 +1,31 @@
-import { Suspense, lazy } from 'react';
 import '../../App.css';
 
-import Renderloader from '../elements/Renderloader';
-
-const About = lazy(async () => await import('../segments/About'));
-const Landing = lazy(async () => await import('../segments/Landing'));
-const Skills = lazy(async () => await import('../segments/Skills'));
-const Exitement = lazy(async () => await import('../segments/Exitement'));
-const Work = lazy(async () => await import('../segments/Work'));
-const Footer = lazy(async () => await import('../segments/Footer'));
-const Social = lazy(async () => await import('../elements/Social'));
-const Navigation = lazy(async () => await import('../elements/Navigation'));
-const Hr = lazy(async () => await import('../elements/Hr'));
-const Container = lazy(async () => await import('../elements/Container'));
+import Container from '../elements/Container';
+import Hr from '../elements/Hr';
+import Navigation from '../elements/Navigation';
+import Social from '../elements/Social';
+import About from '../segments/About';
+import Exitement from '../segments/Exitement';
+import Footer from '../segments/Footer';
+import Landing from '../segments/Landing';
+import Skills from '../segments/Skills';
+import Work from '../segments/Work';
 
 function App() {
     return (
         <div className='dark:bg-black'>
-            <Suspense fallback={Renderloader()}>
-                <Social />
-                <Navigation />
-                <Container content={<Landing />} fullHeight={true} />
-                <Container content={<About />} fullHeight={false} />
-                <Hr />
-                <Container content={<Skills />} fullHeight={false} />
-                <Hr />
-                <Container content={<Exitement />} fullHeight={false} />
-                <Hr />
-                <Container content={<Work />} fullHeight={false} />
-                <Hr />
-                <Footer />
-            </Suspense>
+            <Social />
+            <Navigation />
+            <Container content={<Landing />} fullHeight={true} />
+            <Container content={<About />} fullHeight={false} />
+            <Hr />
+            <Container content={<Skills />} fullHeight={false} />
+            <Hr />
+            <Container content={<Exitement />} fullHeight={false} />
+            <Hr />
+            <Container content={<Work />} fullHeight={false} />
+            <Hr />
+            <Footer />
         </div>
     );
 }

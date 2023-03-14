@@ -1,11 +1,6 @@
-import { Suspense, lazy } from 'react';
-import Renderloader from '../elements/Renderloader';
-
-const Title = lazy(async () => await import('../elements/Title'));
-const ContentContainer = lazy(
-    async () => await import('../elements/ContentContainer')
-);
-const Fader = lazy(async () => await import('../elements/Fader'));
+import ContentContainer from '../elements/ContentContainer';
+import Fader from '../elements/Fader';
+import Title from '../elements/Title';
 
 const AboutContent = {
     title: 'This guy..',
@@ -13,21 +8,19 @@ const AboutContent = {
         'My name is Pieter Rees. I am a Developer with full stack experience and a huge interest for everything that is related to electronics and technology.'
 };
 const About = () => (
-    <Suspense fallback={Renderloader()}>
-        <div id='about'>
-            <Fader>
-                <Title size={'xxl'} title={AboutContent.title} />
-            </Fader>
+    <div id='about'>
+        <Fader>
+            <Title size={'xxl'} title={AboutContent.title} />
+        </Fader>
 
-            <div className='grid grid-cols-1 gap-24 mx-auto mt-8'>
-                <div className='flex items-center'>
-                    <Fader>
-                        <ContentContainer content={AboutContent.content} />
-                    </Fader>
-                </div>
+        <div className='grid grid-cols-1 gap-24 mx-auto mt-8'>
+            <div className='flex items-center'>
+                <Fader>
+                    <ContentContainer content={AboutContent.content} />
+                </Fader>
             </div>
         </div>
-    </Suspense>
+    </div>
 );
 
 export default About;

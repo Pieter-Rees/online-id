@@ -8,7 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
-        'prettier'
+        'plugin:prettier/recommended'
     ],
     ignorePatterns: ['**/*.js'],
     overrides: [],
@@ -25,7 +25,8 @@ module.exports = {
         'react-hooks',
         'import-newlines',
         '@typescript-eslint',
-        'prettier'
+        'autofix',
+        'sort-imports-es6-autofix'
     ],
     rules: {
         '@typescript-eslint/no-explicit-any': 2,
@@ -37,14 +38,16 @@ module.exports = {
         'sort-imports': [
             'error',
             {
-                ignoreCase: false,
-                ignoreDeclarationSort: false,
-                ignoreMemberSort: false,
-                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-                allowSeparatedGroups: false
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
             }
         ],
-        'prettier/prettier': 2
+        'sort-imports-es6-autofix/sort-imports-es6': [
+            2,
+            {
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+            }
+        ],
+        'prettier/prettier': 'error'
     },
     settings: {
         react: {

@@ -1,15 +1,10 @@
-import { Suspense, lazy } from 'react';
-import Renderloader from '../elements/Renderloader';
-
-const Title = lazy(async () => await import('../elements/Title'));
-const ContentContainer = lazy(
-    async () => await import('../elements/ContentContainer')
-);
-const IotLogo = lazy(async () => await import('../svg/Iot'));
-const RcLogo = lazy(async () => await import('../svg/Rc'));
-const LinuxLogo = lazy(async () => await import('../svg/Linux'));
-const TechLogo = lazy(async () => await import('../svg/Tech'));
-const Fader = lazy(async () => await import('../elements/Fader'));
+import ContentContainer from '../elements/ContentContainer';
+import Fader from '../elements/Fader';
+import Title from '../elements/Title';
+import IotLogo from '../svg/Iot';
+import LinuxLogo from '../svg/Linux';
+import RcLogo from '../svg/Rc';
+import TechLogo from '../svg/Tech';
 
 const ExitementTitle = 'Exitement';
 
@@ -37,45 +32,43 @@ const At = {
 };
 
 const Exitement = () => (
-    <Suspense fallback={Renderloader()}>
-        <div id='exitement'>
+    <div id='exitement'>
+        <Fader>
+            <Title size={'xxl'} title={ExitementTitle} />
+        </Fader>
+
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
             <Fader>
-                <Title size={'xxl'} title={ExitementTitle} />
+                <ContentContainer
+                    content={Iot.content}
+                    image={<IotLogo />}
+                    title={Iot.title}
+                />
             </Fader>
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-24'>
-                <Fader>
-                    <ContentContainer
-                        content={Iot.content}
-                        image={<IotLogo />}
-                        title={Iot.title}
-                    />
-                </Fader>
-
-                <Fader>
-                    <ContentContainer
-                        content={Rc.content}
-                        image={<RcLogo />}
-                        title={Rc.title}
-                    />
-                </Fader>
-                <Fader>
-                    <ContentContainer
-                        content={Linux.content}
-                        image={<LinuxLogo />}
-                        title={Linux.title}
-                    />
-                </Fader>
-                <Fader>
-                    <ContentContainer
-                        content={At.content}
-                        image={<TechLogo />}
-                        title={At.title}
-                    />
-                </Fader>
-            </div>
+            <Fader>
+                <ContentContainer
+                    content={Rc.content}
+                    image={<RcLogo />}
+                    title={Rc.title}
+                />
+            </Fader>
+            <Fader>
+                <ContentContainer
+                    content={Linux.content}
+                    image={<LinuxLogo />}
+                    title={Linux.title}
+                />
+            </Fader>
+            <Fader>
+                <ContentContainer
+                    content={At.content}
+                    image={<TechLogo />}
+                    title={At.title}
+                />
+            </Fader>
         </div>
-    </Suspense>
+    </div>
 );
 
 export default Exitement;
