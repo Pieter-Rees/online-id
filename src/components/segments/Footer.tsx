@@ -6,7 +6,7 @@ import SvgContainer from '../elements/SvgContainer';
 import Tag from '../svg/Tag';
 
 const Footer = () => (
-    <div className='pb-8' id='footer'>
+    <section className='pb-8' id='footer'>
         <Fader>
             <p className='text-center text-sm dark:text-white'>
                 <span className='block'>Made in Amsterdam</span>
@@ -29,7 +29,7 @@ const Footer = () => (
                 </Link>
             </div>
         </Fader>
-    </div>
+    </section>
 );
 
 export default Footer;

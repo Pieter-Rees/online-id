@@ -1,7 +1,4 @@
-import { Link } from 'react-router-dom';
 import Fader from '../elements/Fader';
-import SvgContainer from '../elements/SvgContainer';
-import Tag from '../svg/Tag';
 import Title from '../elements/Title';
 
 const Landing = () => (
@@ -15,11 +12,6 @@ const Landing = () => (
                     <Title size={'xxl'} title={'I make web things, and more'} />
                 </Fader>
             </div>
-        </div>
-        <div className='absolute left-4 top-4 z-1000'>
-            <Link to='/resume'>
-                <SvgContainer color='grey' size='small' svg={<Tag />} />
-            </Link>
         </div>
     </>
 );

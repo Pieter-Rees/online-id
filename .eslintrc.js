@@ -40,6 +40,16 @@ module.exports = {
                 memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
             }
         ],
+        'react/jsx-sort-props': [
+            2,
+            {
+                callbacksLast: true,
+                shorthandFirst: false,
+                shorthandLast: true,
+                ignoreCase: true,
+                noSortAlphabetically: false
+            }
+        ],
         'prettier/prettier': 'error'
     },
     settings: {

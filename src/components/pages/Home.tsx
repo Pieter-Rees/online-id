@@ -1,15 +1,18 @@
 import '../../App.css';
 
-import About from '../segments/About';
+import { Link } from 'react-router-dom';
 import Container from '../elements/Container';
+import Hr from '../elements/Hr';
+import Navigation from '../elements/Navigation';
+import Social from '../elements/Social';
+import SvgContainer from '../elements/SvgContainer';
+import About from '../segments/About';
 import Exitement from '../segments/Exitement';
 import Footer from '../segments/Footer';
-import Hr from '../elements/Hr';
 import Landing from '../segments/Landing';
-import Navigation from '../elements/Navigation';
 import Skills from '../segments/Skills';
-import Social from '../elements/Social';
 import Work from '../segments/Work';
+import Tag from '../svg/Tag';
 
 function App() {
     return (
@@ -26,6 +29,11 @@ function App() {
             <Container content={<Work />} fullHeight={false} />
             <Hr />
             <Footer />
+            <div className='fixed left-4 top-4 z-1000'>
+                <Link to='/resume'>
+                    <SvgContainer color='grey' size='small' svg={<Tag />} />
+                </Link>
+            </div>
         </div>
     );
 }

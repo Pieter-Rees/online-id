@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Wall({ fetchData, setPassword }) {
+function Wall({ fetchData }) {
     const [localPassword, setLocalPassword] = useState('');
 
     return (
@@ -13,20 +13,19 @@ function Wall({ fetchData, setPassword }) {
                     <input
                         className='shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
                         id='password'
-                        onChange={(e) => setLocalPassword(e.target.value)}
                         placeholder='******************'
                         type='password'
                         value={localPassword}
+                        onChange={(e) => setLocalPassword(e.target.value)}
                     />
                 </div>
                 <div className='flex items-center justify-center'>
                     <button
-                        className='bg-red hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                        onClick={() => {
-                            setPassword(localPassword);
-                            fetchData();
-                        }}
+                        className='inline-block rounded border-2 border-primary px-6 pt-2 pb-[6px] text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-black hover:bg-black hover:text-white focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
                         type='button'
+                        onClick={() => {
+                            fetchData(localPassword);
+                        }}
                     >
                         View portfolio
                     </button>
