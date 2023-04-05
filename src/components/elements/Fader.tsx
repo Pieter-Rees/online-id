@@ -1,7 +1,7 @@
-import { InView } from 'react-intersection-observer'
-import { ReactNode } from 'react'
+import { InView } from 'react-intersection-observer';
+import { ReactNode } from 'react';
 interface FaderProps {
-    children: ReactNode
+    children: ReactNode;
 }
 
 const Fader = (props: FaderProps) => (
@@ -9,14 +9,15 @@ const Fader = (props: FaderProps) => (
         {({ inView, ref }) => (
             <div ref={ref}>
                 <div
-                    className={`transition-all duration-500 ${inView ? 'opacity-100' : 'opacity-0'
-                        }`}
+                    className={`transition-all duration-500 ${
+                        inView ? 'opacity-100' : 'opacity-0'
+                    }`}
                 >
                     {props.children}
                 </div>
             </div>
         )}
     </InView>
-)
+);
 
-export default Fader
+export default Fader;

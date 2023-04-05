@@ -1,38 +1,63 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true,
+        es2021: true
     },
     extends: [
         'eslint:recommended',
         'plugin:react/recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
-        'prettier',
+        'plugin:prettier/recommended'
     ],
     ignorePatterns: ['**/*.js'],
     overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
-            jsx: true,
+            jsx: true
         },
         ecmaVersion: 'latest',
-        sourceType: 'module',
+        sourceType: 'module'
     },
-    plugins: ['react', '@typescript-eslint', 'react-hooks', 'import-newlines', 'prettier'],
+    plugins: [
+        'react',
+        'react-hooks',
+        'import-newlines',
+        '@typescript-eslint',
+        'autofix'
+    ],
     rules: {
         '@typescript-eslint/no-explicit-any': 2,
         'react/jsx-sort-props': 'error',
         'import-newlines/enforce': 'error',
         'no-debugger': 1,
         'react/react-in-jsx-scope': 'off',
+        'react/prop-types': 'off',
+        'sort-imports': [
+            1,
+            {
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+            }
+        ],
+        'react/jsx-sort-props': [
+            2,
+            {
+                callbacksLast: true,
+                shorthandFirst: false,
+                shorthandLast: true,
+                ignoreCase: true,
+                noSortAlphabetically: false
+            }
+        ],
+        'prettier/prettier': 'error'
     },
     settings: {
         react: {
-            version: 'detect', // React version. "detect" automatically picks the version you have installed.
+            version: 'detect' // React version. "detect" automatically picks the version you have installed.
         },
         'import/parsers': {
-            '@typescript-eslint/parser': ['.ts', '.tsx'],
+            '@typescript-eslint/parser': ['.ts', '.tsx']
         },
         'import/resolver': {
             typescript: {
@@ -49,11 +74,17 @@ module.exports = {
                 project: 'packages/*/tsconfig.json',
 
                 // use an array
-                project: ['packages/module-a/tsconfig.json', 'packages/module-b/tsconfig.json'],
+                project: [
+                    'packages/module-a/tsconfig.json',
+                    'packages/module-b/tsconfig.json'
+                ],
 
                 // use an array of glob patterns
-                project: ['packages/*/tsconfig.json', 'other-packages/*/tsconfig.json'],
-            },
-        },
-    },
-}
+                project: [
+                    'packages/*/tsconfig.json',
+                    'other-packages/*/tsconfig.json'
+                ]
+            }
+        }
+    }
+};
