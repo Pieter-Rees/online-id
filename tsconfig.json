@@ -1,42 +1,34 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "es6",
-      "dom",
-      "es2017"
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["es6", "dom", "es2017"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "noImplicitAny": false,
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "src/components/segments/ResumeContent.js",
+        "src/components/pages/Resume.js",
+        "src/components/segments/ResumeLanding.js"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "noImplicitAny": false,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+    "exclude": ["node_modules"],
+    "rules": {
+        "no-any": true
     }
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "src/components/segments/ResumeContent.js",
-    "src/components/pages/Resume.js",
-    "src/components/segments/ResumeLanding.js"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "rules": {
-    "no-any": true
-  }
 }
