@@ -1,18 +1,18 @@
 import '../../App.css';
 
 import { Link } from 'react-router-dom';
-import Container from '../elements/Container';
-import Hr from '../elements/Hr';
-import Navigation from '../elements/Navigation';
-import Social from '../elements/Social';
-import SvgContainer from '../elements/SvgContainer';
 import About from '../segments/About';
+import Container from '../elements/Container';
 import Exitement from '../segments/Exitement';
 import Footer from '../segments/Footer';
+import Hr from '../elements/Hr';
 import Landing from '../segments/Landing';
+import Navigation from '../elements/Navigation';
 import Skills from '../segments/Skills';
-import Work from '../segments/Work';
+import Social from '../elements/Social';
+import SvgContainer from '../elements/SvgContainer';
 import Tag from '../svg/Tag';
+import Work from '../segments/Work';
 
 function App() {
     return (

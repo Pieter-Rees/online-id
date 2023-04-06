@@ -25,6 +25,7 @@ module.exports = {
         'react-hooks',
         'import-newlines',
         '@typescript-eslint',
+        'sort-imports-es6-autofix',
         'autofix'
     ],
     rules: {
@@ -34,12 +35,6 @@ module.exports = {
         'no-debugger': 1,
         'react/react-in-jsx-scope': 'off',
         'react/prop-types': 'off',
-        'sort-imports': [
-            1,
-            {
-                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
-            }
-        ],
         'react/jsx-sort-props': [
             2,
             {
@@ -48,6 +43,14 @@ module.exports = {
                 shorthandLast: true,
                 ignoreCase: true,
                 noSortAlphabetically: false
+            }
+        ],
+        'sort-imports-es6-autofix/sort-imports-es6': [
+            2,
+            {
+                ignoreCase: false,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
             }
         ],
         'prettier/prettier': 'error'
