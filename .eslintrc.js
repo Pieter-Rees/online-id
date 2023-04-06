@@ -46,7 +46,7 @@ module.exports = {
             }
         ],
         'sort-imports-es6-autofix/sort-imports-es6': [
-            2,
+            1,
             {
                 ignoreCase: false,
                 ignoreMemberSort: false,

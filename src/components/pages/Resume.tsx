@@ -1,15 +1,15 @@
-import '../../App.css';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../../App.css';
 import Container from '../elements/Container';
 import Fader from '../elements/Fader';
-import Footer from '../segments/Footer';
 import Hr from '../elements/Hr';
-import ResumeLanding from '../segments/ResumeLanding';
 import Social from '../elements/Social';
 import SvgContainer from '../elements/SvgContainer';
-import Tag from '../svg/Tag';
 import Wall from '../elements/Wall';
+import Footer from '../segments/Footer';
+import ResumeLanding from '../segments/ResumeLanding';
+import Tag from '../svg/Tag';
 
 interface Powers {
     name: string;
@@ -38,7 +38,7 @@ function Resume() {
             })
         };
 
-        fetch('http://localhost:5050/resume', options)
+        fetch('https://161.97.176.156:5050/resume', options)
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => {
