@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 
-import ReactGA from 'react-ga';
 import Home from './components/pages/Home';
+import ReactGA from 'react-ga';
 import Resume from './components/pages/Resume';
 
 ReactGA.initialize('UA-156298268-1');

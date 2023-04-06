@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../../App.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import Container from '../elements/Container';
 import Fader from '../elements/Fader';
+import Footer from '../segments/Footer';
 import Hr from '../elements/Hr';
+import ResumeLanding from '../segments/ResumeLanding';
 import Social from '../elements/Social';
 import SvgContainer from '../elements/SvgContainer';
-import Wall from '../elements/Wall';
-import Footer from '../segments/Footer';
-import ResumeLanding from '../segments/ResumeLanding';
 import Tag from '../svg/Tag';
+import Wall from '../elements/Wall';
 
 interface Powers {
     name: string;
