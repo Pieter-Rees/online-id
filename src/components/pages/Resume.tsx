@@ -39,7 +39,7 @@ function Resume() {
             })
         };
 
-        fetch('https://161.97.176.156:5050/resume', options)
+        fetch('https://pietserver.nl:5050/resume', options)
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => {
