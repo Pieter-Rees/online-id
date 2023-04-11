@@ -1,38 +1,41 @@
-import { Suspense, lazy } from 'react'
-import '../../App.css'
+import '../../App.css';
 
-import Renderloader from '../elements/Renderloader'
-
-const About = lazy(async () => await import('../segments/About'))
-const Landing = lazy(async () => await import('../segments/Landing'))
-const Skills = lazy(async () => await import('../segments/Skills'))
-const Exitement = lazy(async () => await import('../segments/Exitement'))
-const Work = lazy(async () => await import('../segments/Work'))
-const Footer = lazy(async () => await import('../segments/Footer'))
-const Social = lazy(async () => await import('../elements/Social'))
-const Navigation = lazy(async () => await import('../elements/Navigation'))
-const Hr = lazy(async () => await import('../elements/Hr'))
-const Container = lazy(async () => await import('../elements/Container'))
+import { Link } from 'react-router-dom';
+import About from '../segments/About';
+import Container from '../elements/Container';
+import Exitement from '../segments/Exitement';
+import Footer from '../segments/Footer';
+import Hr from '../elements/Hr';
+import Landing from '../segments/Landing';
+import Navigation from '../elements/Navigation';
+import Skills from '../segments/Skills';
+import Social from '../elements/Social';
+import SvgContainer from '../elements/SvgContainer';
+import Tag from '../svg/Tag';
+import Work from '../segments/Work';
 
 function App() {
     return (
         <div className='dark:bg-black'>
-            <Suspense fallback={Renderloader()}>
-                <Social />
-                <Navigation />
-                <Container content={<Landing />} fullHeight={true} />
-                <Container content={<About />} fullHeight={false} />
-                <Hr />
-                <Container content={<Skills />} fullHeight={false} />
-                <Hr />
-                <Container content={<Exitement />} fullHeight={false} />
-                <Hr />
-                <Container content={<Work />} fullHeight={false} />
-                <Hr />
-                <Footer />
-            </Suspense>
+            <Social />
+            <Navigation />
+            <Container content={<Landing />} fullHeight={true} />
+            <Container content={<About />} fullHeight={false} />
+            <Hr />
+            <Container content={<Skills />} fullHeight={false} />
+            <Hr />
+            <Container content={<Exitement />} fullHeight={false} />
+            <Hr />
+            <Container content={<Work />} fullHeight={false} />
+            <Hr />
+            <Footer />
+            <div className='fixed left-4 top-4 z-1000'>
+                <Link to='/resume'>
+                    <SvgContainer color='grey' size='small' svg={<Tag />} />
+                </Link>
+            </div>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;

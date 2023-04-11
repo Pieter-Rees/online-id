@@ -7,7 +7,7 @@ pipeline {
                 echo 'Installing pnpm'
                 sh 'npm install pnpm -g'
                 echo 'Installing with pnpm'
-                sh 'pnpm install'
+                sh 'pnpm install --no-frozen-lockfile'
             }
         }   
         stage('Build') {

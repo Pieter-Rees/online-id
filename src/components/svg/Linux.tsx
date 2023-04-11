@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 const Linux = () => (
     <svg
         className='fill-black dark:fill-white hover:fill-red'
@@ -12,6 +12,6 @@ const Linux = () => (
         <path d='M360 312c-26.472 0-48 21.528-48 48s21.528 48 48 48 48-21.528 48-48-21.528-48-48-48zm0 80c-17.648 0-32-14.352-32-32s14.352-32 32-32 32 14.352 32 32-14.352 32-32 32zM384 208v-96H48v256h160v-16H64V128h304v80z' />
         <path d='M80 144h16v64H80zM160 208v-64h-48v64h48zm-32-48h16v32h-16v-32zM256 208v-64h-48v64h48zm-32-48h16v32h-16v-32zM320 208v-64h-48v64h48zm-32-48h16v32h-16v-32zM176 144h16v64h-16zM336 144h16v64h-16z' />
     </svg>
-)
+);
 
-export default Linux
+export default Linux;
