@@ -1,13 +1,13 @@
 version: '3.7'
 services:
-  frontend:
-    container_name: online-id
-    image: docker-react-i
-    build:
-      context: .
-    volumes:
-      - './:/app'
-      - '/app/node_modules'
-    ports:
-      - 8080:80
-    stdin_open: true
+    frontend:
+        container_name: online-id
+        image: docker-react-i
+        build:
+            context: .
+        volumes:
+            - './:/app'
+            - '/app/node_modules'
+        ports:
+            - 8080:80
+        stdin_open: true
