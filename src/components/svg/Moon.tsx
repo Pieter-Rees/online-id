@@ -1,4 +1,3 @@
-import React from 'react';
 const Moon = () => (
     <svg
         className='fill-black hover:fill-red'

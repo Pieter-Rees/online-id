@@ -16,7 +16,10 @@ function DarkMode() {
         document.body.className = theme;
     }, [theme]);
     return (
-        <span onClick={toggleTheme}>
+        <span
+            className='cursor-crosshair text-sm text-black hover:text-red dark:text-white font-bold'
+            onClick={toggleTheme}
+        >
             {theme == 'light' ? (
                 <SvgContainer svg={<Moon />} />
             ) : (

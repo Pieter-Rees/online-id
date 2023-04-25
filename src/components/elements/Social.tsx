@@ -4,6 +4,11 @@ import Github from '../svg/Github';
 import Linkedin from '../svg/Linkedin';
 import SvgContainer from './SvgContainer';
 
+const isFirefox = () => {
+    const isFirefox = navigator.userAgent.indexOf('Firefox') != -1;
+    return isFirefox;
+};
+
 const Social = () => (
     <div className='fixed left-0 bottom-0 m-6 p-3 rounded-3xl shadow-xl backdrop-blur-sm ease-in-out duration-100 border-white border-solid border-2'>
         <div className='flex items-center'>
@@ -42,9 +47,12 @@ const Social = () => (
                     pieter@pieterrees.nl
                 </a>
             </div>
-            <div className='mx-2 flex items-center cursor-crosshair hidden lg:flex'>
-                <DarkMode />
-            </div>
+
+            {!isFirefox() ? (
+                <div className='mx-2 flex items-center cursor-crosshair hidden lg:flex'>
+                    <DarkMode />
+                </div>
+            ) : null}
         </div>
     </div>
 );

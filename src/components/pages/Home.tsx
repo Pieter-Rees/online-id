@@ -1,22 +1,26 @@
 import '../../App.css';
 
 import { Link } from 'react-router-dom';
-import About from '../segments/About';
 import Container from '../elements/Container';
-import Exitement from '../segments/Exitement';
-import Footer from '../segments/Footer';
 import Hr from '../elements/Hr';
-import Landing from '../segments/Landing';
 import Navigation from '../elements/Navigation';
-import Skills from '../segments/Skills';
 import Social from '../elements/Social';
 import SvgContainer from '../elements/SvgContainer';
-import Tag from '../svg/Tag';
+import About from '../segments/About';
+import Exitement from '../segments/Exitement';
+import Footer from '../segments/Footer';
+import Landing from '../segments/Landing';
+import Skills from '../segments/Skills';
 import Work from '../segments/Work';
+import Tag from '../svg/Tag';
 
 function App() {
     return (
         <div className='dark:bg-black'>
+            <div className='fixed top-0 h-full w-full'>
+                <div className=' top-plane'></div>
+                <div className='bottom-plane'></div>
+            </div>
             <Social />
             <Navigation />
             <Container content={<Landing />} fullHeight={true} />
