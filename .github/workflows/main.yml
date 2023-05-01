@@ -7,10 +7,20 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
+
+    - name: Use Node.js 18
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+      
+    - name: 🔨 Build Project
+      run: |
+        pnpm install
+        pnpm run build
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: 161.97.176.156
         username: pieterrees
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.password }}
