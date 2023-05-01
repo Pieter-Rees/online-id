@@ -1,27 +1,28 @@
 on: push
 name: 🚀 Deploy website on push
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+    web-deploy:
+        name: 🎉 Deploy
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🚚 Get latest code
+              uses: actions/checkout@v3
 
-    - name: Use Node.js 18
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-      
-    - name: 🔨 Build Project
-      run: |
-        pnpm install
-        pnpm run build
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: 161.97.176.156
-        username: pieterrees
-        password: ${{ secrets.password }}
-        server_dir: /home/pieterrees/public_html
+            - name: Use Node.js 18
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+
+            - name: 🔨 Build Project
+              run: |
+                  npm install -g pnpm
+                  pnpm install
+                  pnpm run build
+
+            - name: 📂 Sync files
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+              with:
+                  server: 161.97.176.156
+                  username: pieterrees
+                  password: ${{ secrets.password }}
+                  server_dir: /home/pieterrees/public_html
