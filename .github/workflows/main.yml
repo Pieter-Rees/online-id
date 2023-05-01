@@ -27,4 +27,8 @@ jobs:
                   password: ${{ secrets.password }}
                   local-dir: ./build/
                   server-dir: /home/pieterrees/public_html/
-                  exclude: | **/.vscode* **/.git* **/.git*/** **/node_modules/**
+                  eexclude: |
+                      **/.git*
+                      **/.git*/**
+                      **/node_modules/**
+                      **/.vscode/**
