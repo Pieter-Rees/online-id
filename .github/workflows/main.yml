@@ -25,4 +25,4 @@ jobs:
                   server: 161.97.176.156
                   username: pieterrees
                   password: ${{ secrets.password }}
-                  server_dir: /home/pieterrees/public_html
+                  server-dir: /home/pieterrees/public_html
