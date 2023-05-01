@@ -12,14 +12,14 @@ module.exports = {
             xxxl: '5rem',
             xxxxl: '6rem',
             xxxxxl: '7rem',
-            xxxxxxl: '8rem',
+            xxxxxxl: '8rem'
         },
         screens: {
             sm: '480px',
             md: '768px',
             lg: '976px',
             xl: '1440px',
-            xxl: '2560px',
+            xxl: '2560px'
         },
         colors: {
             white: '#f8f8ff',
@@ -27,10 +27,11 @@ module.exports = {
             red: '#e53e3e',
             blue: '#89cff0',
             green: '#9bdb69',
-        },
+            test: '#ff0000'
+        }
     },
     variants: {
-        extend: {},
+        extend: {}
     },
-    plugins: [],
-}
+    plugins: []
+};
